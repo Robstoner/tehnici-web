@@ -6,6 +6,8 @@ liniile 31-44
 liniile 64, 92, 95
 7.
 liniile 69,61
+8.
+liniile 52-57
 9.
 liniile 50, 51, 29, 32, 70-87
 10.
