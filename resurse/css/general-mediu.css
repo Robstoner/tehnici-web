@@ -1,16 +1,19 @@
 html {
   font-size: 14px;
+  transition: font-size 0.5s linear;
 }
 body {
   --page-padding: 1em;
 }
 
 .grid {
+  grid-template-columns: repeat("1fr", 3);
   display: grid;
   grid-template-areas:
-    "z-meniu z-search"
-    "z-acasa z-acasa"
-    "z-produse z-produse"
-    "z-produse z-produse"
-    "z-oferte z-vandute";
+    "z-acasa z-acasa z-acasa"
+    "z-acasa z-acasa z-acasa"
+    "z-utilizatori-online z-utilizatori-stats z-date-site"
+    "z-calendar z-calendar z-tabel"
+    "z-anunturi z-anunturi z-tabel"
+    "z-detalii z-detalii z-detalii";
 }

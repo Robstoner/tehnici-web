@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="">
+<body class="dark">
     <header>
         <h1 id="top">Magazin de electronice</h1>
 
@@ -65,7 +65,40 @@
             <li><a href="despre.html">Despre</a></li>
         </ul>
     </nav>
-    <main class="grid">
+    <main class="grid dark">
+        <section id="meniu">
+            <h3>Meniu per categorii</h3>
+
+            <p><strong>Meniul va fi folosit pentru a naviga prin categorii si subcategorii de produse.</strong></p>
+
+            <label id="hamburger" for="ch-menu">
+                <i class="fa-solid fa-bars" alt="menu"></i>
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
+                <li><a href="#telefoane">Telefoane</a></li>
+                <li><a href="#laptopuri">Laptopuri</a></li>
+                <li><a href="#tablete">Tablete</a></li>
+                <li>
+                    <div href="#televizoare">Televizoare</div>
+                    <ul>
+                        <li><a href="#smart-tv">Smart <abbr title="Televizor">TV</abbr></a></li>
+                        <li><a href="#tv"><abbr title="Televizor">TV</abbr></a></li>
+                    </ul>
+                </li>
+                <li><a href="#boxe">Boxe</a></li>
+                <li>
+                    <div href="#casti">Casti</div>
+                    <ul>
+                        <li><a href="#casti-bluetooth">Casti bluetooth</a></li>
+                        <li><a href="#casti-cu-fir">Casti cu fir</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#accesorii">Accesorii</a></li>
+            </ul>
+
+        </section>
         <section id="acasa">
             <h2>Acasa</h2>
             <figure>
@@ -82,62 +115,46 @@
             <p>Unul din site-urile folosite ca exemplu:
                 <a href="https://www.emag.ro/">eMAG</a>
             </p>
+        </section>
+        <section id="search">
+            <h3>Search bar</h3>
 
+            <p><strong>Search bar-ul va fi folosit pentru a cauta produsele dorite de utilizator.</strong> <br>
+
+        </section>
+        <section id="produse">
+            <h2>Produse</h2>
             <div class="container-iframe">
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/j-3or4KACMI" target="iframe-det">Monitor</a>
+                    <a href="https://www.youtube.com/embed/cnuSQYve6ZA" target="iframe-det">Telefon</a>
+                </div>
                 <iframe name="iframe-det" width="560" height="315" src="https://www.youtube.com/embed/j-3or4KACMI"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-                <div class="taburi-iframe">
-                    <a class="link-iframe" href="https://www.youtube.com/embed/j-3or4KACMI"
-                        target="iframe-det">Monitor</a>
-                    <a class="link-iframe1" href="https://www.youtube.com/embed/cnuSQYve6ZA"
-                        target="iframe-det">Telefon</a>
-                </div>
             </div>
-        </section>
-
-        <section id="tabel">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, sequi fugiat nihil necessitatibus
-            reiciendis ipsum nulla illo laboriosam perspiciatis qui ea omnis amet ex corrupti dolore, possimus dolor
-            voluptatibus quas?
-        </section>
-        <section id="calendar">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem dignissimos a hic natus veniam
-            delectus necessitatibus iste eos quae, cupiditate sint aspernatur nobis quam praesentium tenetur dolorum
-            libero quidem.
-        </section>
-        <section id="anunturi">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt culpa quis iusto at sed reiciendis neque
-            rem amet, ullam dolores dolor alias libero, sapiente nemo explicabo possimus, error tempore voluptates.
-        </section>
-        <section id="ultilizatori-online">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias velit sunt assumenda ipsa sequi
-            consequatur, necessitatibus facilis! Vitae repellendus eligendi officiis commodi dolorum? Deleniti labore
-            minima ut vero sed.
-        </section>
-        <section id="utilizatori-stats">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nam tempore soluta libero harum? Itaque alias
-            sint nobis? Deserunt ullam odit libero sequi nihil cum repellat temporibus nulla. Dolorum, sit.
-        </section>
-        <section id="date-site">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium placeat fugiat dolores accusamus?
-            Eligendi temporibus sequi dolore. Quasi dolores beatae in inventore magnam, eaque itaque veniam harum
-            molestias voluptatem ratione.
-        </section>
-        <section id="detalii">
-            <p>
-                Pentru a face site-ul cat mai intuitiv si simplu de navigat, am decis sa creez o pagina principala unde
-                va exista un meniu din care se va putea ajunge la orice categorie sau subcategorie de electronice
-                (telefoane, componente PC, televizoare, televizoare Smart, etc.), un search bar, ofertele actuale si
-                cateva din cele mai vandute produse.
-            </p>
+            <section id="oferta">
+                <h3>Ofertele curente</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis iure pariatur facere
+                    corporis accusamus blanditiis ducimus nesciunt. Accusantium quo nulla non perferendis qui
+                    repudiandae unde rem adipisci molestiae voluptate?
+                </p>
+            </section>
+            <section id="vandute">
+                <h3>Cele mai vandute produse</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis nulla labore repellat cum eum
+                    aspernatur, sit at ut cupiditate voluptate dicta recusandae asperiores omnis aut impedit. Quas
+                    mollitia dolorum itaque?
+                </p>
+            </section>
         </section>
     </main>
     <footer>
         <hr>
-        <a id="top-btn" href="#top">&#5123;</a>
-
+        <a href="#top">Inapoi sus</a><br><br>
         <a href="https://goo.gl/maps/oRsgpggNcDV2WBAWA">Str Cara Anghel Nr 9, Bucuresti, Romania</a><br>
         <a href="tel:+4073054710">+40 730 544 710</a><br>
         <a href="mailto:robstoner19@gmail.com">robstoner19@gmail.com</a><br>
