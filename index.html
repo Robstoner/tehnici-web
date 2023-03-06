@@ -24,19 +24,20 @@
     <title>Magazin de electronice</title>
 
     <link rel="stylesheet" href="./resurse/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="./resurse/css/general-mediu.css" type="text/css"
+        media="screen and (max-width:1000px)" />
+    <link rel="stylesheet" href="./resurse/css/general-mic.css" type="text/css" media="screen and (max-width:700px)" />
+
 </head>
 
-<body>
+<body class="dark">
     <header>
         <h1 id="top">Magazin de electronice</h1>
         <nav>
             <ul>
-                <li><a href="#acasa">Acasa</a>
-                    <ul>
-                        <li><a href="#search">Search bar</a></li>
-                        <li><a href="#meniu">Meniu per categorii</a></li>
-                    </ul>
-                </li>
+                <li><a href="#acasa">Acasa</a></li>
+                <li><a href="#search">Search bar</a></li>
+                <li><a href="#meniu">Meniu per categorii</a></li>
                 <li><a href="#produse">Produse</a>
                     <ul>
                         <li><a href="#oferta">Produse la oferta</a></li>
@@ -46,7 +47,33 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="grid">
+        <section id="meniu">
+            <h3>Meniu per categorii</h3>
+
+            <p><strong>Meniul va fi folosit pentru a naviga prin categorii si subcategorii de produse.</strong></p>
+            <ul>
+                <li><a href="#telefoane">Telefoane</a></li>
+                <li><a href="#laptopuri">Laptopuri</a></li>
+                <li><a href="#tablete">Tablete</a></li>
+                <li><a href="#televizoare">Televizoare</a>
+                    <ul>
+                        <li><a href="#smart-tv">Smart <abbr title="Televizor">TV</abbr></a></li>
+                        <li><a href="#tv"><abbr title="Televizor">TV</abbr></a></li>
+                    </ul>
+                </li>
+                <li><a href="#boxe">Boxe</a></li>
+                <li><a href="#casti">Casti</a>
+                    <ul>
+                        <li><a href="#casti-bluetooth">Casti bluetooth</a></li>
+                        <li><a href="#casti-cu-fir">Casti cu fir</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#accesorii">Accesorii</a></li>
+            </ul>
+
+        </section>
         <section id="acasa">
             <h2>Acasa</h2>
             <figure>
@@ -63,38 +90,12 @@
             <p>Unul din site-urile folosite ca exemplu:
                 <a href="https://www.emag.ro/">eMAG</a>
             </p>
-            <section id="search">
-                <h3>Search bar</h3>
+        </section>
+        <section id="search">
+            <h3>Search bar</h3>
 
-                <p><strong>Search bar-ul va fi folosit pentru a cauta produsele dorite de utilizator.</strong> <br>
+            <p><strong>Search bar-ul va fi folosit pentru a cauta produsele dorite de utilizator.</strong> <br>
 
-            </section>
-            <section id="meniu">
-                <h3>Meniu per categorii</h3>
-
-                <p><strong>Meniul va fi folosit pentru a naviga prin categorii si subcategorii de produse.</strong></p>
-                <ul>
-                    <li><a href="#telefoane">Telefoane</a></li>
-                    <li><a href="#laptopuri">Laptopuri</a></li>
-                    <li><a href="#tablete">Tablete</a></li>
-                    <li><a href="#televizoare">Televizoare</a>
-                        <ul>
-                            <li><a href="#smart-tv">Smart <abbr title="Televizor">TV</abbr></a></li>
-                            <li><a href="#tv"><abbr title="Televizor">TV</abbr></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#boxe">Boxe</a></li>
-                    <li><a href="#casti">Casti</a>
-                        <ul>
-                            <li><a href="#casti-bluetooth">Casti bluetooth</a></li>
-                            <li><a href="#casti-cu-fir">Casti cu fir</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#accesorii">Accesorii</a></li>
-                </ul>
-
-            </section>
         </section>
         <section id="produse">
             <h2>Produse</h2>

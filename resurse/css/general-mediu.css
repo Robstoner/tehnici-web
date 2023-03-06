@@ -1,0 +1,13 @@
+body {
+  --page-padding: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "z-meniu z-search"
+    "z-acasa z-acasa"
+    "z-produse z-produse"
+    "z-produse z-produse"
+    "z-oferte z-vandute";
+}

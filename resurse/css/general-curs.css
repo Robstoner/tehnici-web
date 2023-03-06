@@ -1,0 +1,77 @@
+/*
+p.intro{
+    color:orange;
+}
+
+p{
+    color:red;  
+}
+
+p{
+    color:green;  
+}
+
+#welcome{
+    border: 3px solid red;
+}
+
+#grid-pagina  h2{
+    background-color: yellow;
+}
+
+h2 ~ *{
+    border:10px green solid;
+}
+
+*/
+
+body {
+  --culoare-mov: #c886ff;
+  --roz-deschis: rgb(255, 219, 235);
+  --culoare-fundal: rgb(255, 219, 235);
+  --culoare-text: black;
+}
+
+body.dark {
+  --culoare-fundal: black;
+  --culoare-text: white;
+}
+
+body {
+  background-color: var(--culoare-fundal);
+  color: var(--culoare-text);
+}
+
+#grid > * {
+  border: 3px solid green;
+}
+#grid {
+  display: grid;
+  grid-template-areas:
+    "z-acasa z-acasa z-search"
+    "z-meniu z-meniu z-search"
+    "z-produse z-produse z-promotii"
+    "z-produse z-produse z-produse"
+    "z-oferte z-vandute z-vandute";
+}
+
+#acasa {
+  grid-area: z-acasa;
+}
+#meniu {
+  grid-area: z-meniu;
+}
+
+#search {
+  grid-area: z-search;
+}
+#produse {
+  grid-area: z-produse;
+}
+
+#oferte {
+  grid-area: z-oferte;
+}
+#vandute {
+  grid-area: z-vandute;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "proiect-web",
+  "version": "1.0.0",
+  "description": "proiect pentru tehnici web",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robstoner/tehnici-web.git"
+  },
+  "author": "Schmidt Robert",
+  "license": "N/A",
+  "bugs": {
+    "url": "https://github.com/Robstoner/tehnici-web/issues"
+  },
+  "homepage": "https://github.com/Robstoner/tehnici-web#readme",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
+}

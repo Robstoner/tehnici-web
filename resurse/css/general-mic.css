@@ -1,0 +1,7 @@
+body {
+  --page-padding: 0em;
+}
+
+.grid {
+  display: block;
+}
