@@ -3,26 +3,6 @@ html {
   transition: font-size 0.5s linear;
 }
 
-body {
-  --light-bg: #ffffff;
-  --dark-bg: #141313;
-  --color-dark: #252525;
-  --color-light: #efeded;
-  --accent-color-light: #a682ff;
-  --accent-color-dark: #01a7c2;
-  --accent-color: #5b3da7;
-
-  --background-color: var(--light-bg);
-  --background-color-accent: var(--color-light);
-  --secondary-color: var(--accent-color-light);
-  --special-color: var(--accent-color-dark);
-  --text-color: var(--dark-bg);
-
-  --section-margin: 10px;
-  --page-padding: 20px;
-  --section-padding: 10px;
-}
-
 body.dark {
   --background-color: var(--dark-bg);
   --background-color-accent: var(--color-dark);
@@ -69,18 +49,18 @@ footer > a:hover {
   line-height: 2rem;
   font-size: 23px;
   text-align: center;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--special-color);
   border-radius: 50%;
-  color: var(--secondary-color);
-  background: rgb(220, 220, 220);
+  color: var(--special-color);
+  background: var(--background-color);
 }
 
 #top-btn:hover {
   text-decoration: none;
-  background-color: var(--secondary-color);
+  background-color: var(--special-color);
   color: var(--background-color);
   transition: all 0.5s linear;
-  box-shadow: 0px 0px 5px 5px var(--secondary-color);
+  box-shadow: 0px 0px 5px 5px var(--special-color);
   opacity: 1;
 }
 div.container-iframe {

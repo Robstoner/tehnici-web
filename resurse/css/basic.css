@@ -1,3 +1,23 @@
+body {
+  --light-bg: #ffffff;
+  --dark-bg: #141313;
+  --color-dark: #252525;
+  --color-light: #efeded;
+  --accent-color-light: #a682ff;
+  --accent-color-dark: #01a7c2;
+  --accent-color: #5b3da7;
+
+  --background-color: var(--light-bg);
+  --background-color-accent: var(--color-light);
+  --secondary-color: var(--accent-color-light);
+  --special-color: var(--accent-color-dark);
+  --text-color: var(--dark-bg);
+
+  --section-margin: 10px;
+  --page-padding: 20px;
+  --section-padding: 10px;
+}
+
 p {
   margin: 0.5em;
 }
@@ -39,7 +59,7 @@ h6 {
 }
 
 a {
-  color: #0000ff;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
