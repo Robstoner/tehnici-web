@@ -1,7 +1,24 @@
+html {
+  font-size: 12px;
+}
+
 body {
   --page-padding: 0em;
 }
 
 .grid {
   display: block;
+}
+
+.grid > * {
+  margin-bottom: 15px;
+}
+
+#hamburger,
+#ch-menu {
+  display: inline-block;
+}
+
+ul.meniu {
+  display: none;
 }

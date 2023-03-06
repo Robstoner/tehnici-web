@@ -21,9 +21,14 @@
     <meta name="msapplication-config" content="./resurse/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="https://kit.fontawesome.com/bf2200c905.js" crossorigin="anonymous"></script>
+
     <title>Magazin de electronice</title>
 
     <link rel="stylesheet" href="./resurse/css/general.css" type="text/css" />
+
+    <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
+
     <link rel="stylesheet" href="./resurse/css/general-mediu.css" type="text/css"
         media="screen and (max-width:1000px)" />
     <link rel="stylesheet" href="./resurse/css/general-mic.css" type="text/css" media="screen and (max-width:700px)" />
@@ -33,11 +38,15 @@
 <body class="dark">
     <header>
         <h1 id="top">Magazin de electronice</h1>
+        <label id="hamburger" for="ch-menu">
+            <i class="fa-solid fa-bars" alt="menu"></i>
+        </label>
+        <input id="ch-menu" type="checkbox">
         <nav>
-            <ul>
+            <ul class="meniu">
                 <li><a href="#acasa">Acasa</a></li>
-                <li><a href="#search">Search bar</a></li>
-                <li><a href="#meniu">Meniu per categorii</a></li>
+                <!-- <li><a href="#search">Search bar</a></li>
+                <li><a href="#meniu">Meniu per categorii</a></li> -->
                 <li><a href="#produse">Produse</a>
                     <ul>
                         <li><a href="#oferta">Produse la oferta</a></li>
@@ -52,7 +61,11 @@
             <h3>Meniu per categorii</h3>
 
             <p><strong>Meniul va fi folosit pentru a naviga prin categorii si subcategorii de produse.</strong></p>
-            <ul>
+            <label id="hamburger" for="ch-menu">
+                <i class="fa-solid fa-bars" alt="menu"></i>
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
                 <li><a href="#telefoane">Telefoane</a></li>
                 <li><a href="#laptopuri">Laptopuri</a></li>
                 <li><a href="#tablete">Tablete</a></li>
