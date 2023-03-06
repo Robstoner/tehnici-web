@@ -10,7 +10,7 @@ body {
   --color-light: #efeded;
   --accent-color-light: #a682ff;
   --accent-color-dark: #01a7c2;
-  --accent-color: hsl(257, 65%, 61%);
+  --accent-color: #5b3da7;
 
   --background-color: var(--light-bg);
   --background-color-accent: var(--color-light);
@@ -38,14 +38,11 @@ body {
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
   min-width: 450px;
-  margin: 0;
 }
 
 footer {
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 0;
-  margin: 0;
   text-align: center;
   margin-left: calc(-1 * var(--page-padding));
   margin-right: calc(-1 * var(--page-padding));
@@ -62,40 +59,44 @@ footer > a:hover {
 
 #top-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-weight: 500;
+  bottom: 0.8em;
+  opacity: 0.5;
+  right: 0.8em;
+  width: 2rem;
+  box-sizing: border-box;
+  height: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  font-size: 23px;
   text-align: center;
-  vertical-align: center;
-  color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
-  padding: 5px;
-  border-radius: 90%;
-  font-size: 1.5em;
-  cursor: pointer;
-  transition: background-color 0.3s linear;
-  opacity: 0.25;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  background: rgb(220, 220, 220);
 }
 
 #top-btn:hover {
   background-color: var(--secondary-color);
   color: var(--background-color);
   transition: all 0.5s linear;
-  box-shadow: var(--special-color);
+  box-shadow: 0px 0px 5px 5px var(--secondary-color);
   opacity: 1;
 }
-
+div.container-iframe {
+  display: flex;
+  flex-direction: row;
+}
 div.container-iframe > iframe {
   display: inline-block;
-  border: 0;
 }
 
 div.taburi-iframe {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 
-.link-iframe1 {
-  display: block;
+.link-iframe {
+  display: flex;
   padding: 5px;
   margin: 5px;
   border: 1px solid var(--secondary-color);
@@ -103,31 +104,13 @@ div.taburi-iframe {
   text-decoration: none;
   color: var(--text-color);
   background-color: var(--special-color);
+  width: 100px;
+  text-align: center;
 }
 
-.link-iframe1:hover {
-  /* make button longer to the right */
-  padding-right: 20px;
+.link-iframe:hover {
+  padding-left: 20px;
   transition: all 0.5s linear;
-  box-shadow: var(--special-color);
-}
-
-.link-iframe2 {
-  display: block;
-  padding: 5px;
-  margin: 5px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--special-color);
-}
-
-.link-iframe2:hover {
-  /* make button longer to the right */
-  padding-right: 20px;
-  transition: all 0.5s linear;
-  box-shadow: var(--special-color);
 }
 
 .grid > * {
@@ -137,7 +120,7 @@ div.taburi-iframe {
   background-color: var(--background-color-accent);
 }
 .grid {
-  grid-template-columns: repeat("1fr", 4);
+  grid-template-columns: "1fr, 1fr, 1fr, 1fr";
   display: grid;
   grid-template-areas:
     "z-acasa z-acasa z-acasa z-acasa"
