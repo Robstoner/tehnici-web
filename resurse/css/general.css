@@ -3,23 +3,29 @@ html {
 }
 
 body {
-  --dark-bg: rgb(15, 15, 15);
-  --color-light: #f4fff8;
-  --color-dark: #000f08;
-  --primary-color: #1c3738;
-  --secondary-color: #8baaad;
-  --accent-color: #4d4847;
+  --light-bg: #ffffff;
+  --dark-bg: #141313;
+  --color-dark: #252525;
+  --color-light: #efeded;
+  --accent-color-light: #a682ff;
+  --accent-color-dark: #01a7c2;
+  --accent-color: hsl(257, 65%, 61%);
 
-  --background-color: var(--color-light);
+  --background-color: var(--light-bg);
+  --background-color-accent: var(--color-light);
+  --secondary-color: var(--accent-color-light);
   --text-color: var(--dark-bg);
 
-  --page-padding: 2em;
-  --section-padding: 1em;
+  --section-margin: 10px;
+  --page-padding: 20px;
+  --section-padding: 10px;
 }
 
 body.dark {
   --background-color: var(--dark-bg);
-  --text-color: var(--color-light);
+  --background-color-accent: var(--color-dark);
+  --secondary-color: var(--accent-color-dark);
+  --text-color: var(--light-bg);
 }
 
 body {
@@ -28,13 +34,24 @@ body {
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
   min-width: 450px;
+  margin: 0;
 }
 
-/* make a grid area with the following sections: acasa, search, meniu, produse, oferta, vandute */
+footer {
+  background-color: black;
+  color: var(--color-light);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-left: calc(-1 * var(--page-padding));
+  margin-right: calc(-1 * var(--page-padding));
+}
 
 .grid > * {
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--secondary-color);
   padding: var(--section-padding);
+  margin: var(--section-margin);
+  background-color: var(--background-color-accent);
 }
 .grid {
   grid-template-columns: repeat("1fr", 3);

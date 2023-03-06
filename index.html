@@ -38,29 +38,32 @@
 <body class="dark">
     <header>
         <h1 id="top">Magazin de electronice</h1>
+
+    </header>
+    <nav>
         <label id="hamburger" for="ch-menu">
             <i class="fa-solid fa-bars" alt="menu"></i>
         </label>
         <input id="ch-menu" type="checkbox">
-        <nav>
-            <ul class="meniu">
-                <li><a href="#acasa">Acasa</a></li>
-                <!-- <li><a href="#search">Search bar</a></li>
-                <li><a href="#meniu">Meniu per categorii</a></li> -->
-                <li><a href="#produse">Produse</a>
-                    <ul>
-                        <li><a href="#oferta">Produse la oferta</a></li>
-                        <li><a href="#vandute">Cele mai vandute produse</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="grid">
+        <ul class="meniu">
+            <li><a href="#acasa">Acasa</a></li>
+            <!-- <li><a href="#search">Search bar</a></li>
+                    <li><a href="#meniu">Meniu per categorii</a></li> -->
+            <li>
+                <div href="#produse">Produse</div>
+                <ul>
+                    <li><a href="#oferta">Oferte</a></li>
+                    <li><a href="#vandute">Best sellers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="grid dark">
         <section id="meniu">
             <h3>Meniu per categorii</h3>
 
             <p><strong>Meniul va fi folosit pentru a naviga prin categorii si subcategorii de produse.</strong></p>
+
             <label id="hamburger" for="ch-menu">
                 <i class="fa-solid fa-bars" alt="menu"></i>
             </label>
@@ -69,14 +72,16 @@
                 <li><a href="#telefoane">Telefoane</a></li>
                 <li><a href="#laptopuri">Laptopuri</a></li>
                 <li><a href="#tablete">Tablete</a></li>
-                <li><a href="#televizoare">Televizoare</a>
+                <li>
+                    <div href="#televizoare">Televizoare</div>
                     <ul>
                         <li><a href="#smart-tv">Smart <abbr title="Televizor">TV</abbr></a></li>
                         <li><a href="#tv"><abbr title="Televizor">TV</abbr></a></li>
                     </ul>
                 </li>
                 <li><a href="#boxe">Boxe</a></li>
-                <li><a href="#casti">Casti</a>
+                <li>
+                    <div href="#casti">Casti</div>
                     <ul>
                         <li><a href="#casti-bluetooth">Casti bluetooth</a></li>
                         <li><a href="#casti-cu-fir">Casti cu fir</a></li>
@@ -112,15 +117,16 @@
         </section>
         <section id="produse">
             <h2>Produse</h2>
-
-            <a href="https://www.youtube.com/embed/j-3or4KACMI" target="iframe-det">Monitor</a>
-            <a href="https://www.youtube.com/embed/cnuSQYve6ZA" target="iframe-det">Telefon</a>
-
-            <iframe name="iframe-det" width="560" height="315" src="https://www.youtube.com/embed/j-3or4KACMI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            <div class="container-iframe">
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/j-3or4KACMI" target="iframe-det">Monitor</a>
+                    <a href="https://www.youtube.com/embed/cnuSQYve6ZA" target="iframe-det">Telefon</a>
+                </div>
+                <iframe name="iframe-det" width="560" height="315" src="https://www.youtube.com/embed/j-3or4KACMI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
             <section id="oferta">
                 <h3>Ofertele curente</h3>
                 <p>
