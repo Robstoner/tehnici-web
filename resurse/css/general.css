@@ -76,6 +76,7 @@ footer > a:hover {
 }
 
 #top-btn:hover {
+  text-decoration: none;
   background-color: var(--secondary-color);
   color: var(--background-color);
   transition: all 0.5s linear;
@@ -93,22 +94,21 @@ div.container-iframe > iframe {
 div.taburi-iframe {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .link-iframe {
-  display: flex;
   padding: 5px;
   margin: 5px;
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
-  text-decoration: none;
   color: var(--text-color);
   background-color: var(--special-color);
   width: 100px;
-  text-align: center;
 }
 
 .link-iframe:hover {
+  text-decoration: none;
   padding-left: 20px;
   transition: all 0.5s linear;
 }
