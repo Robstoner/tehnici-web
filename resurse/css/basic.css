@@ -13,9 +13,9 @@ body {
   --special-color: var(--accent-color-dark);
   --text-color: var(--dark-bg);
 
-  --section-margin: 10px;
-  --page-padding: 20px;
-  --section-padding: 10px;
+  --page-padding: 1.5em;
+  --section-margin: 0.5em;
+  --section-padding: 0.5em;
 }
 
 p {

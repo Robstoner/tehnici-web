@@ -96,18 +96,19 @@ div.taburi-iframe {
 .grid > * {
   border: 3px solid var(--secondary-color);
   padding: var(--section-padding);
-  margin: var(--section-margin);
+  /* margin: var(--section-margin); */
   background-color: var(--background-color-accent);
 }
 .grid {
-  grid-template-columns: "1fr, 1fr, 1fr, 1fr";
   display: grid;
+  grid-template-columns: "1fr, 1fr, 1fr,s 1fr";
+  gap: var(--section-margin);
   grid-template-areas:
     "z-acasa z-acasa z-acasa z-acasa"
     "z-acasa z-acasa z-acasa z-acasa"
     "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site"
-    "z-calendar z-calendar z-tabel z-tabel"
-    "z-anunturi z-anunturi z-tabel z-tabel"
+    "z-calendar z-calendar z-best-sellers z-best-sellers"
+    "z-anunturi z-anunturi z-best-sellers z-best-sellers"
     "z-detalii z-detalii z-detalii z-detalii";
 }
 
@@ -115,8 +116,8 @@ div.taburi-iframe {
   grid-area: z-acasa;
 }
 
-#tabel {
-  grid-area: z-tabel;
+#best-sellers {
+  grid-area: z-best-sellers;
 }
 
 #calendar {
@@ -148,19 +149,67 @@ img {
   max-width: 800px;
 }
 
-/* #meniu {
-  grid-area: z-meniu;
-}
-#search {
-  grid-area: z-search;
-}
-#produse {
-  grid-area: z-produse;
+.div-tabel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-#oferte {
-  grid-area: z-oferte;
+#tabel-produse caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em;
+  color: var(--text-color);
 }
-#vandute {
-  grid-area: z-vandute;
-} */
+
+#tabel-produse {
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  border-collapse: separate;
+}
+
+#tabel-produse td,
+th {
+  border-left: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  margin: 5px;
+  padding: 5px;
+}
+
+#tabel-produse th {
+  background-color: var(--accent-color);
+  border-top: none;
+}
+
+#tabel-produse td:first-child,
+#tabel-produse th:first-child {
+  border-left: none;
+}
+
+#tabel-produse tr:nth-child(even) {
+  background-color: var(--background-color);
+}
+
+#tabel-produse tr:nth-child(odd) {
+  background-color: var(--background-color-accent);
+}
+
+#tabel-produse tr:hover {
+  background-color: var(--secondary-color);
+  transition: background-color 0.5s linear;
+}
+
+#tabel-produse td:hover {
+  background-color: var(--accent-color);
+  transition: background-color 0.5s linear;
+}
+
+#tabel-produse td:hover > a {
+  color: var(--background-color);
+  transition: color 0.5s linear;
+}
+
+#tabel-produse tfoot {
+  font-weight: bold;
+  font-style: italic;
+}

@@ -31,10 +31,10 @@
 
     <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
 
+
     <link rel="stylesheet" href="./resurse/css/general-mediu.css" type="text/css"
         media="screen and (max-width:1000px)" />
     <link rel="stylesheet" href="./resurse/css/general-mic.css" type="text/css" media="screen and (max-width:700px)" />
-
 </head>
 
 <body class="dark">
@@ -48,11 +48,11 @@
         </label>
         <input id="ch-menu" type="checkbox">
         <ul class="meniu">
-            <li><a href="#top">Prima pagina</a></li>
-            <li><a href="#acasa">Acasa</a>
+            <li>
+                <a href="#acasa">Acasa</a>
                 <ul class="submeniu">
                     <li><a href="#oferta">Oferte</a></li>
-                    <li><a href="#vandute">Best sellers</a></li>
+                    <li><a href="#best-sellers">Best sellers</a></li>
                 </ul>
             </li>
             <li>
@@ -99,10 +99,51 @@
             </div>
         </section>
 
-        <section id="tabel">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, sequi fugiat nihil necessitatibus
-            reiciendis ipsum nulla illo laboriosam perspiciatis qui ea omnis amet ex corrupti dolore, possimus dolor
-            voluptatibus quas?
+        <section id="best-sellers">
+            <div class="div-tabel">
+                <table id="tabel-produse">
+                    <caption> Best sellers</caption>
+                    <thead>
+                        <tr>
+                            <th>Nume produs</th>
+                            <th>Pret</th>
+                            <th>Link produs</th>
+                            <th>Data lansarii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Samsung Galaxy S22</td>
+                            <td>3000 RON</td>
+                            <td><a href="produs.html">Click here</a></td>
+                            <td>25 Februarie 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Apple iPhone 13</td>
+                            <td>4000 RON</td>
+                            <td><a href="produs.html">Click here</a></td>
+                            <td>1 Octombrie 2021</td>
+                        </tr>
+                        <tr>
+                            <td>Lenovo Ideapad 5</td>
+                            <td>3500 RON</td>
+                            <td><a href="produs.html">Click here</a></td>
+                            <td>1 Iunie 2021</td>
+                        </tr>
+                        <tr>
+                            <td>Asus ROG Strix G15</td>
+                            <td>5000 RON</td>
+                            <td><a href="produs.html">Click here</a></td>
+                            <td>15 Martie 2021</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Nu garantam ca produsele afisate inca sunt in stoc.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </section>
         <section id="calendar">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem dignissimos a hic natus veniam
