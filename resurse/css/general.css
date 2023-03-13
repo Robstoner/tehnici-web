@@ -236,3 +236,7 @@ th {
   font-weight: bold;
   font-style: italic;
 }
+
+#watermark {
+  display: none;
+}
