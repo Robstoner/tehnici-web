@@ -23,6 +23,7 @@ nav {
 
 ul.meniu {
   display: flex;
+  justify-content: center;
 }
 
 ul.meniu > li {

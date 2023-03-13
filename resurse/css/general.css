@@ -121,6 +121,7 @@ div.taburi-iframe {
 }
 .grid {
   display: grid;
+  padding-top: var(--section-padding);
   grid-template-columns: "1fr, 1fr, 1fr,s 1fr";
   gap: var(--section-margin);
   grid-template-areas:
