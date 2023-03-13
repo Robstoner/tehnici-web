@@ -127,3 +127,52 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+p {
+  margin: 0.5em;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+h4 {
+  font-size: 0.75em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+h5 {
+  font-size: 0.5em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+h6 {
+  font-size: 0.25em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
