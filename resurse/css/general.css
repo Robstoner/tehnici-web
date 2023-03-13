@@ -89,6 +89,8 @@ div.container-iframe {
 }
 div.container-iframe > iframe {
   display: inline-block;
+  border: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--accent-color);
 }
 
 div.taburi-iframe {
@@ -100,7 +102,7 @@ div.taburi-iframe {
 .link-iframe {
   padding: 5px;
   margin: 5px;
-  border: 1px solid var(--secondary-color);
+  border: 3px double var(--secondary-color);
   border-radius: 5px;
   color: var(--text-color);
   background-color: var(--special-color);

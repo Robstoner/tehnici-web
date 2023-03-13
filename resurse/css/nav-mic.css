@@ -3,6 +3,14 @@ body {
   --menu-button-width: 100%;
 }
 
+#acasa {
+  display: none;
+}
+
+#acasa-mediu {
+  display: block;
+}
+
 nav {
   width: 100%;
 }
@@ -11,7 +19,6 @@ nav {
   display: block;
   height: var(--menu-height);
   cursor: pointer;
-  float: right;
   padding: 0.7em;
 }
 
