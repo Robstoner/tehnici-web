@@ -2,9 +2,11 @@
   "name": "proiect-web",
   "version": "1.0.0",
   "description": "proiect pentru tehnici web",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon .",
+    "scss": "sass --watch resurse/scss:resurse/css"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,10 @@
   "homepage": "https://github.com/Robstoner/tehnici-web#readme",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "sass": "^1.58.3"
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "sass": "^1.59.3"
   }
 }

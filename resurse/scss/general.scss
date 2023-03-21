@@ -3,29 +3,31 @@ html {
   transition: font-size 0.5s linear;
 }
 
+@import "globals";
+
 body {
-  background-color: #141313;
-  color: #ffffff;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  background-color: $background-color;
+  color: $text-color;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
   min-width: 450px;
 }
 
 footer {
-  background-color: #141313;
-  color: #ffffff;
+  background-color: $background-color;
+  color: $text-color;
   text-align: center;
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: calc(-1 * $page-padding);
+  margin-right: calc(-1 * $page-padding);
 }
 
 footer > a {
-  color: #ffffff;
+  color: $text-color;
   text-decoration: none;
 }
 
 footer > a:hover {
-  color: #01a7c2;
+  color: $secondary-color;
 }
 
 #top-btn {
@@ -40,30 +42,28 @@ footer > a:hover {
   line-height: 2rem;
   font-size: 23px;
   text-align: center;
-  border: 1px solid #a682ff;
+  border: 1px solid $special-color;
   border-radius: 50%;
-  color: #a682ff;
-  background: #141313;
+  color: $special-color;
+  background: $background-color;
 }
 
 #top-btn:hover {
   text-decoration: none;
-  background-color: #a682ff;
-  color: #141313;
+  background-color: $special-color;
+  color: $background-color;
   transition: all 0.5s linear;
-  box-shadow: 0px 0px 5px 5px #a682ff;
+  box-shadow: 0px 0px 5px 5px $special-color;
   opacity: 1;
 }
-
 div.container-iframe {
   display: flex;
   flex-direction: row;
 }
-
 div.container-iframe > iframe {
   display: inline-block;
-  border: 2px solid #01a7c2;
-  border-right: 2px solid #5b3da7;
+  border: 2px solid $secondary-color;
+  border-right: 2px solid $accent-color;
 }
 
 div.taburi-iframe {
@@ -75,10 +75,10 @@ div.taburi-iframe {
 .link-iframe {
   padding: 5px;
   margin: 5px;
-  border: 3px double #01a7c2;
+  border: 3px double $secondary-color;
   border-radius: 5px;
-  color: #ffffff;
-  background-color: #a682ff;
+  color: $text-color;
+  background-color: $special-color;
   width: 100px;
 }
 
@@ -89,18 +89,23 @@ div.taburi-iframe {
 }
 
 .grid > * {
-  border: 3px solid #01a7c2;
-  padding: 0.5em;
+  border: 3px solid $secondary-color;
+  padding: $section-padding;
   /* margin: $section-margin; */
-  background-color: #252525;
+  background-color: $background-color-accent;
 }
-
 .grid {
   display: grid;
-  padding-top: 0.5em;
+  padding-top: $section-padding;
   grid-template-columns: "1fr, 1fr, 1fr,s 1fr";
-  gap: 0.5em;
-  grid-template-areas: "z-acasa z-acasa z-acasa z-acasa" "z-acasa z-acasa z-acasa z-acasa" "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site" "z-calendar z-calendar z-best-sellers z-best-sellers" "z-anunturi z-anunturi z-best-sellers z-best-sellers" "z-detalii z-detalii z-detalii z-detalii";
+  gap: $section-margin;
+  grid-template-areas:
+    "z-acasa z-acasa z-acasa z-acasa"
+    "z-acasa z-acasa z-acasa z-acasa"
+    "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site"
+    "z-calendar z-calendar z-best-sellers z-best-sellers"
+    "z-anunturi z-anunturi z-best-sellers z-best-sellers"
+    "z-detalii z-detalii z-detalii z-detalii";
 }
 
 #acasa {
@@ -150,25 +155,25 @@ img {
   font-size: 1.5em;
   font-weight: bold;
   padding: 0.5em;
-  color: #ffffff;
+  color: $text-color;
 }
 
 #tabel-produse {
-  border: 1px solid #5b3da7;
+  border: 1px solid $accent-color;
   border-radius: 5px;
   border-collapse: separate;
 }
 
 #tabel-produse td,
 th {
-  border-left: 1px solid #5b3da7;
-  border-top: 1px solid #5b3da7;
+  border-left: 1px solid $accent-color;
+  border-top: 1px solid $accent-color;
   margin: 5px;
   padding: 5px;
 }
 
 #tabel-produse th {
-  background-color: #5b3da7;
+  background-color: $accent-color;
   border-top: none;
 }
 
@@ -178,25 +183,25 @@ th {
 }
 
 #tabel-produse tr:nth-child(even) {
-  background-color: #141313;
+  background-color: $background-color;
 }
 
 #tabel-produse tr:nth-child(odd) {
-  background-color: #252525;
+  background-color: $background-color-accent;
 }
 
 #tabel-produse tr:hover {
-  background-color: #01a7c2;
+  background-color: $secondary-color;
   transition: background-color 0.5s linear;
 }
 
 #tabel-produse td:hover {
-  background-color: #5b3da7;
+  background-color: $accent-color;
   transition: background-color 0.5s linear;
 }
 
 #tabel-produse td:hover > a {
-  color: #141313;
+  color: $background-color;
   transition: color 0.5s linear;
 }
 
@@ -208,5 +213,3 @@ th {
 #watermark {
   display: none;
 }
-
-/*# sourceMappingURL=general.css.map */

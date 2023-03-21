@@ -4,7 +4,7 @@
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 h1 {
@@ -28,7 +28,7 @@ h1 {
   display: block;
   height: 2cm;
   width: 100px;
-  border: 2px double var(--accent-color);
+  border: 2px double #5b3da7;
   content: "Schmidt Robert Eduard";
 }
 
@@ -50,11 +50,13 @@ header {
   page-break-after: always;
 }
 
-@page: left {
+@page : left {
   margin-left: 2.5cm;
   margin-right: 0.5cm;
 }
-@page: right {
+@page : right {
   margin-left: 0.5cm;
   margin-right: 2.5cm;
-} ;
+}
+
+/*# sourceMappingURL=print.css.map */

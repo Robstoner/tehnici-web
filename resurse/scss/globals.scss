@@ -1,0 +1,26 @@
+$light-bg: #ffffff;
+$dark-bg: #141313;
+$color-dark: #252525;
+$color-light: #efeded;
+$accent-color-light: #a682ff;
+$accent-color-dark: #01a7c2;
+$accent-color: #5b3da7;
+
+$background-color: $light-bg;
+$background-color-accent: $color-light;
+$secondary-color: $accent-color-light;
+$special-color: $accent-color-dark;
+$text-color: $dark-bg;
+
+$page-padding: 1.5em;
+$section-margin: 0.5em;
+$section-padding: 0.5em;
+
+body.dark {
+  $background-color: $dark-bg !global;
+  $background-color-accent: $color-dark !global;
+  $secondary-color: $accent-color-dark !global;
+  $special-color: $accent-color-light !global;
+
+  $text-color: $light-bg !global;
+}

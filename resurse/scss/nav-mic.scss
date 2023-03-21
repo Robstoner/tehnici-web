@@ -1,7 +1,7 @@
-body {
-  --menu-height: 30px;
-  --menu-button-width: 100%;
-}
+@import "globals";
+
+$menu-height: 30px;
+$menu-button-width: 100%;
 
 #acasa {
   display: none;
@@ -17,15 +17,26 @@ nav {
 
 #hamburger {
   display: block;
-  height: var(--menu-height);
+  height: $menu-height;
   cursor: pointer;
-  padding: 0.7em;
+  i {
+    font-size: 1.5em;
+    color: $text-color;
+    margin-left: 0.7em;
+    margin-top: 0.7em;
+  }
+}
+
+.menu-bar {
+  display: none !important;
 }
 
 ul.meniu {
-  display: none;
+  display: block;
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.5s linear;
 }
 
 #ch-menu:checked + ul.meniu {
-  display: block;
+  clip-path: circle(100%);
 }

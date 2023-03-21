@@ -3,13 +3,17 @@ html {
   transition: font-size 0.3s linear;
 }
 
+@import "globals";
+
+$page-padding: 0.25em;
+$section-margin: 0.1em;
+$section-padding: 0.1em;
+
 .grid {
   display: block;
-  gap: 0.1em;
+  gap: $section-margin;
 }
 
 .grid > * {
   margin-bottom: 15px;
 }
-
-/*# sourceMappingURL=general-mic.css.map */
