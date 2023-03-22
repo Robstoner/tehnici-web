@@ -7,10 +7,9 @@
 
 $menu-height: 30px;
 $menu-button-width: 120px;
-$menu-color: $secondary-color;
 
 nav {
-  background-color: $menu-color;
+  background-color: $secondary-color;
   height: $menu-height;
   width: calc(100vw - 18px);
   margin-left: calc(-1 * $page-padding);
@@ -34,7 +33,7 @@ ul.meniu {
     width: $menu-button-width;
     height: $menu-height;
     overflow: hidden;
-    background-color: $menu-color;
+    background-color: $secondary-color;
     box-sizing: content-box;
     transition: background-color 0.3s linear;
 
@@ -85,7 +84,7 @@ ul.submeniu > li {
   flex-basis: $menu-button-width;
   width: $menu-button-width;
   height: $menu-height;
-  background-color: $menu-color;
+  background-color: $secondary-color;
   box-sizing: content-box;
   transition: background-color 0.3s linear;
 }

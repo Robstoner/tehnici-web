@@ -6,21 +6,33 @@ $accent-color-light: #a682ff;
 $accent-color-dark: #01a7c2;
 $accent-color: #5b3da7;
 
-$background-color: $light-bg;
-$background-color-accent: $color-light;
-$secondary-color: $accent-color-light;
-$special-color: $accent-color-dark;
-$text-color: $dark-bg;
+$background-color: #ffffff;
+$background-color-accent: #efeded;
+$secondary-color: #a682ff;
+$special-color: #01a7c2;
+$text-color: #141313;
 
 $page-padding: 1.5em;
 $section-margin: 0.5em;
 $section-padding: 0.5em;
 
 body.dark {
-  $background-color: $dark-bg !global;
-  $background-color-accent: $color-dark !global;
-  $secondary-color: $accent-color-dark !global;
-  $special-color: $accent-color-light !global;
+  $background-color: #141313 !global;
+  $background-color-accent: #252525 !global;
+  $secondary-color: #01a7c2 !global;
+  $special-color: #a682ff !global;
 
-  $text-color: $light-bg !global;
+  $text-color: #ffffff !global;
+}
+
+@media screen and (max-width: 700px) {
+  $page-padding: 0.25em !global;
+  $section-margin: 0.1em !global;
+  $section-padding: 0.1em !global;
+}
+
+@media screen and (max-width: 1000px) {
+  $page-padding: 0.75em !global;
+  $section-margin: 0.3em !global;
+  $section-padding: 0.3em !global;
 }
