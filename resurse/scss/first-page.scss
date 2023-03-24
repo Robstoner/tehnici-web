@@ -37,7 +37,7 @@ div.taburi-iframe {
   border: 3px solid var(--primary-color);
   padding: var(--section-padding);
   /* margin: var(--section-margin); */
-  background-color: var(--background-color)-accent;
+  background-color: var(--background-color-accent);
 }
 
 .grid {
@@ -128,7 +128,7 @@ th {
 }
 
 #tabel-produse tr:nth-child(odd) {
-  background-color: var(--background-color)-accent;
+  background-color: var(--background-color-accent);
 }
 
 #tabel-produse tr:hover {
