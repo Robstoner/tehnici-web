@@ -3,139 +3,133 @@
 
 <head>
 
-    <meta name="keywords"
-        content="proiect, tehnici web, HTML, CSS, electronice, magazin, magazin electronice, vanzare, componente, telefon, produse">
-    <meta name="description" content="Magazin de electronice. Proiect pentru cursul de Tehnici Web.">
-    <title>Magazin de electronice</title>
+  <meta name="keywords" content="proiect, tehnici web, HTML, CSS, electronice, magazin, magazin electronice, vanzare, componente, telefon, produse">
+  <meta name="description" content="Magazin de electronice. Proiect pentru cursul de Tehnici Web.">
+  <title>Magazin de electronice</title>
 
-    <%- include('../fragmente/head') %>
+  <%- include('../fragmente/head') %>
 
-        <link rel="stylesheet" href="/resurse/css/first-page.css" type="text/css" />
+  <link rel="stylesheet" href="/resurse/css/first-page.css" type="text/css" />
 
 </head>
 
 <body class="dark">
-    <p id="watermark"></p>
+  <p id="watermark"></p>
 
-    <%- include('../fragmente/header') %>
+  <%- include('../fragmente/header') %>
 
-        <main class="grid">
-            <section id="acasa">
-                <h2>Acasa</h2>
-                <figure>
-                    <img src="/resurse/imagini/acasa/store-1.png"
-                        srcset="/resurse/imagini/acasa/store-3.png 2x, /resurse/imagini/acasa/store-2.png 1x, /resurse/imagini/acasa/store-1.png 0.5x"
-                        alt="Magazin de electronice" />
-                    <figcaption>Magazin de electronice</figcaption>
-                </figure>
-                <p> Aceasta pagina va fi dedicata unui <b>meniu</b> pentru categorii si subcategorii de <b>produse</b>,
-                    un
-                    search bar, si produsele cele mai vandute + <b>oferte</b>. </p>
-                <p class="intro">Descrierea proiectului (fiesier pdf):
-                    <a href="/resurse/Proiect_Tehnici_Web.pdf" target="_blank" download>Download</a>
-                </p>
-                <p>Unul din site-urile folosite ca exemplu:
-                    <a href="https://www.emag.ro/" target="_blank">eMAG</a>
-                </p>
+  <main class="grid">
+    <section id="acasa">
+      <h2>Acasa</h2>
+      <figure>
+        <img src="/resurse/imagini/acasa/store-1.png" srcset="/resurse/imagini/acasa/store-3.png 2x, /resurse/imagini/acasa/store-2.png 1x, /resurse/imagini/acasa/store-1.png 0.5x" alt="Magazin de electronice" />
+        <figcaption>Magazin de electronice</figcaption>
+      </figure>
+      <p> Aceasta pagina va fi dedicata unui <b>meniu</b> pentru categorii si subcategorii de <b>produse</b>,
+        un
+        search bar, si produsele cele mai vandute + <b>oferte</b>. </p>
+      <p class="intro">Descrierea proiectului (fiesier pdf):
+        <a href="/resurse/Proiect_Tehnici_Web.pdf" target="_blank" download>Download</a>
+      </p>
+      <p>Unul din site-urile folosite ca exemplu:
+        <a href="https://www.emag.ro/" target="_blank">eMAG</a>
+      </p>
 
-                <div class="container-iframe">
-                    <iframe name="iframe-det" width="560" height="315" src="https://www.youtube.com/embed/j-3or4KACMI"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <div class="taburi-iframe">
-                        <a class="link-iframe" href="https://www.youtube.com/embed/j-3or4KACMI"
-                            target="iframe-det">Monitor</a>
-                        <a class="link-iframe" href="https://www.youtube.com/embed/cnuSQYve6ZA"
-                            target="iframe-det">Telefon</a>
-                    </div>
-                </div>
-            </section>
+      <div class="container-iframe">
+        <iframe name="iframe-det" width="560" height="315" src="https://www.youtube.com/embed/j-3or4KACMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="taburi-iframe">
+          <a class="link-iframe" href="https://www.youtube.com/embed/j-3or4KACMI" target="iframe-det">Monitor</a>
+          <a class="link-iframe" href="https://www.youtube.com/embed/cnuSQYve6ZA" target="iframe-det">Telefon</a>
+        </div>
+      </div>
+    </section>
 
-            <section id="best-sellers">
-                <div class="div-tabel">
-                    <table id="tabel-produse">
-                        <caption> Best sellers</caption>
-                        <thead>
-                            <tr>
-                                <th>Nume produs</th>
-                                <th>Pret</th>
-                                <th>Link produs</th>
-                                <th>Data lansarii</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Samsung Galaxy S22</td>
-                                <td>3000 RON</td>
-                                <td><a href="produs.html">Click here</a></td>
-                                <td>25 Februarie 2022</td>
-                            </tr>
-                            <tr>
-                                <td>Apple iPhone 13</td>
-                                <td>4000 RON</td>
-                                <td><a href="produs.html">Click here</a></td>
-                                <td>1 Octombrie 2021</td>
-                            </tr>
-                            <tr>
-                                <td>Lenovo Ideapad 5</td>
-                                <td>3500 RON</td>
-                                <td><a href="produs.html">Click here</a></td>
-                                <td>1 Iunie 2021</td>
-                            </tr>
-                            <tr>
-                                <td>Asus ROG Strix G15</td>
-                                <td>5000 RON</td>
-                                <td><a href="produs.html">Click here</a></td>
-                                <td>15 Martie 2021</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="4">Nu garantam ca produsele afisate inca sunt in stoc.</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </section>
-            <section id="calendar">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem dignissimos a hic natus veniam
-                delectus necessitatibus iste eos quae, cupiditate sint aspernatur nobis quam praesentium tenetur dolorum
-                libero quidem.
-            </section>
-            <section id="anunturi">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt culpa quis iusto at sed reiciendis
-                neque
-                rem amet, ullam dolores dolor alias libero, sapiente nemo explicabo possimus, error tempore voluptates.
-            </section>
-            <section id="ultilizatori-online">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias velit sunt assumenda ipsa sequi
-                consequatur, necessitatibus facilis! Vitae repellendus eligendi officiis commodi dolorum? Deleniti
-                labore
-                minima ut vero sed.
-            </section>
-            <section id="utilizatori-stats">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nam tempore soluta libero harum? Itaque
-                alias
-                sint nobis? Deserunt ullam odit libero sequi nihil cum repellat temporibus nulla. Dolorum, sit.
-            </section>
-            <section id="date-site">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium placeat fugiat dolores accusamus?
-                Eligendi temporibus sequi dolore. Quasi dolores beatae in inventore magnam, eaque itaque veniam harum
-                molestias voluptatem ratione.
-            </section>
-            <section id="detalii">
-                <p>
-                    Pentru a face site-ul cat mai intuitiv si simplu de navigat, am decis sa creez o pagina principala
-                    unde
-                    va exista un meniu din care se va putea ajunge la orice categorie sau subcategorie de electronice
-                    (telefoane, componente PC, televizoare, televizoare Smart, etc.), un search bar, ofertele actuale si
-                    cateva din cele mai vandute produse.
-                </p>
-            </section>
-        </main>
+    <section id="best-sellers">
+      <div class="div-tabel">
+        <table id="tabel-produse">
+          <caption> Best sellers</caption>
+          <thead>
+            <tr>
+              <th>Nume produs</th>
+              <th>Pret</th>
+              <th>Link produs</th>
+              <th>Data lansarii</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung Galaxy S22</td>
+              <td>3000 RON</td>
+              <td><a href="produs.html">Click here</a></td>
+              <td>25 Februarie 2022</td>
+            </tr>
+            <tr>
+              <td>Apple iPhone 13</td>
+              <td>4000 RON</td>
+              <td><a href="produs.html">Click here</a></td>
+              <td>1 Octombrie 2021</td>
+            </tr>
+            <tr>
+              <td>Lenovo Ideapad 5</td>
+              <td>3500 RON</td>
+              <td><a href="produs.html">Click here</a></td>
+              <td>1 Iunie 2021</td>
+            </tr>
+            <tr>
+              <td>Asus ROG Strix G15</td>
+              <td>5000 RON</td>
+              <td><a href="produs.html">Click here</a></td>
+              <td>15 Martie 2021</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Nu garantam ca produsele afisate inca sunt in stoc.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    <section id="calendar">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem dignissimos a hic natus veniam
+      delectus necessitatibus iste eos quae, cupiditate sint aspernatur nobis quam praesentium tenetur dolorum
+      libero quidem.
+    </section>
+    <section id="anunturi">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt culpa quis iusto at sed reiciendis
+      neque
+      rem amet, ullam dolores dolor alias libero, sapiente nemo explicabo possimus, error tempore voluptates.
+    </section>
+    <section id="ultilizatori-online">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias velit sunt assumenda ipsa sequi
+      consequatur, necessitatibus facilis! Vitae repellendus eligendi officiis commodi dolorum? Deleniti
+      labore
+      minima ut vero sed.
+    </section>
+    <section id="utilizatori-stats">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nam tempore soluta libero harum? Itaque
+      alias
+      sint nobis? Deserunt ullam odit libero sequi nihil cum repellat temporibus nulla. Dolorum, sit.
+    </section>
+    <section id="date-site">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium placeat fugiat dolores accusamus?
+      Eligendi temporibus sequi dolore. Quasi dolores beatae in inventore magnam, eaque itaque veniam harum
+      molestias voluptatem ratione.
+    </section>
+    <section id="detalii">
+      <p>
+        Pentru a face site-ul cat mai intuitiv si simplu de navigat, am decis sa creez o pagina principala
+        unde
+        va exista un meniu din care se va putea ajunge la orice categorie sau subcategorie de electronice
+        (telefoane, componente PC, televizoare, televizoare Smart, etc.), un search bar, ofertele actuale si
+        cateva din cele mai vandute produse.
+      </p>
+    </section>
+  </main>
 
-        <% include ('../fragmente/footer') %>
+  <% include ('../fragmente/footer') %>
+
+
 </body>
 
 </html>

@@ -17,6 +17,20 @@ nav {
   top: 0;
 }
 
+#dark-switch {
+  position: absolute;
+  right: 1.5%;
+  top: 0;
+  height: $menu-height;
+  width: $menu-height;
+  background-color: var(--primary-color);
+  border: 0;
+  cursor: pointer;
+  i {
+    color: var(--text-color);
+  }
+}
+
 ul.meniu {
   display: flex;
   justify-content: flex-start;
