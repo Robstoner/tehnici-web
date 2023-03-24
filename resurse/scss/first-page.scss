@@ -7,8 +7,8 @@ div.container-iframe {
 
 div.container-iframe > iframe {
   display: inline-block;
-  border: 2px solid $secondary-color;
-  border-right: 2px solid $accent-color;
+  border: 2px solid var(--primary-color);
+  border-right: 2px solid var(--special-color);
 }
 
 div.taburi-iframe {
@@ -20,10 +20,10 @@ div.taburi-iframe {
 .link-iframe {
   padding: 5px;
   margin: 5px;
-  border: 3px double $secondary-color;
+  border: 3px double var(--primary-color);
   border-radius: 5px;
-  color: $text-color;
-  background-color: $special-color;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
   width: 100px;
 }
 
@@ -34,17 +34,17 @@ div.taburi-iframe {
 }
 
 .grid > * {
-  border: 3px solid $secondary-color;
-  padding: $section-padding;
-  /* margin: $section-margin; */
-  background-color: $background-color-accent;
+  border: 3px solid var(--primary-color);
+  padding: var(--section-padding);
+  /* margin: var(--section-margin); */
+  background-color: var(--background-color)-accent;
 }
 
 .grid {
   display: grid;
-  padding-top: $section-padding;
+  padding-top: var(--section-padding);
   grid-template-columns: "1fr, 1fr, 1fr,s 1fr";
-  gap: $section-margin;
+  gap: var(--section-margin);
   grid-template-areas:
     "z-acasa z-acasa z-acasa z-acasa"
     "z-acasa z-acasa z-acasa z-acasa"
@@ -96,25 +96,25 @@ div.taburi-iframe {
   font-size: 1.5em;
   font-weight: bold;
   padding: 0.5em;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 #tabel-produse {
-  border: 1px solid $accent-color;
+  border: 1px solid var(--special-color);
   border-radius: 5px;
   border-collapse: separate;
 }
 
 #tabel-produse td,
 th {
-  border-left: 1px solid $accent-color;
-  border-top: 1px solid $accent-color;
+  border-left: 1px solid var(--special-color);
+  border-top: 1px solid var(--special-color);
   margin: 5px;
   padding: 5px;
 }
 
 #tabel-produse th {
-  background-color: $accent-color;
+  background-color: var(--special-color);
   border-top: none;
 }
 
@@ -124,25 +124,25 @@ th {
 }
 
 #tabel-produse tr:nth-child(even) {
-  background-color: $background-color;
+  background-color: var(--background-color);
 }
 
 #tabel-produse tr:nth-child(odd) {
-  background-color: $background-color-accent;
+  background-color: var(--background-color)-accent;
 }
 
 #tabel-produse tr:hover {
-  background-color: $secondary-color;
+  background-color: var(--primary-color);
   transition: background-color 0.5s linear;
 }
 
 #tabel-produse td:hover {
-  background-color: $accent-color;
+  background-color: var(--special-color);
   transition: background-color 0.5s linear;
 }
 
 #tabel-produse td:hover > a {
-  color: $background-color;
+  color: var(--background-color);
   transition: color 0.5s linear;
 }
 
@@ -159,7 +159,7 @@ th {
   .grid {
     display: grid;
     grid-template-columns: repeat("1fr", 3);
-    gap: $section-margin;
+    gap: var(--section-margin);
     grid-template-areas:
       "z-acasa z-acasa z-acasa"
       "z-acasa z-acasa z-acasa"
@@ -173,7 +173,7 @@ th {
 @media screen and (max-width: 700px) {
   .grid {
     display: block;
-    gap: $section-margin;
+    gap: var(--section-margin);
   }
 
   .grid > * {

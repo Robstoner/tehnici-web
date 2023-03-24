@@ -6,33 +6,40 @@ $accent-color-light: #a682ff;
 $accent-color-dark: #01a7c2;
 $accent-color: #5b3da7;
 
-$background-color: #ffffff;
-$background-color-accent: #efeded;
-$secondary-color: #a682ff;
-$special-color: #01a7c2;
-$text-color: #141313;
+:root {
+  --background-color: #{$light-bg};
+  --background-color-accent: #{$color-light};
+  --primary-color: #{$accent-color-light};
+  --secondary-color: #{$accent-color-dark};
+  --special-color: #{$accent-color};
+  --text-color: #{$dark-bg};
 
-$page-padding: 1.5em;
-$section-margin: 0.5em;
-$section-padding: 0.5em;
-
-body.dark {
-  $background-color: #141313 !global;
-  $background-color-accent: #252525 !global;
-  $secondary-color: #01a7c2 !global;
-  $special-color: #a682ff !global;
-
-  $text-color: #ffffff !global;
+  --page-padding: 1.5em;
+  --section-margin: 0.5em;
+  --section-padding: 0.5em;
 }
 
-@media screen and (max-width: 700px) {
-  $page-padding: 0.25em !global;
-  $section-margin: 0.1em !global;
-  $section-padding: 0.1em !global;
+body.dark {
+  --background-color: #{$dark-bg};
+  --background-color-accent: #{$color-dark};
+  --secondary-color: #{$accent-color-dark};
+  --special-color: #{$accent-color-light};
+
+  --text-color: #{$light-bg};
 }
 
 @media screen and (max-width: 1000px) {
-  $page-padding: 0.75em !global;
-  $section-margin: 0.3em !global;
-  $section-padding: 0.3em !global;
+  :root {
+    --page-padding: 0.75em;
+    --section-margin: 0.3em;
+    --section-padding: 0.3em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --page-padding: 0.25em;
+    --section-margin: 0.1em;
+    --section-padding: 0.1em;
+  }
 }

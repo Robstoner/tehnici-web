@@ -9,10 +9,10 @@ $menu-height: 30px;
 $menu-button-width: 120px;
 
 nav {
-  background-color: $secondary-color;
+  background-color: var(--primary-color);
   height: $menu-height;
   width: calc(100vw - 18px);
-  margin-left: calc(-1 * $page-padding);
+  margin-left: calc(-1 * var(--page-padding));
   position: sticky;
   top: 0;
 }
@@ -33,12 +33,12 @@ ul.meniu {
     width: $menu-button-width;
     height: $menu-height;
     overflow: hidden;
-    background-color: $secondary-color;
+    background-color: var(--primary-color);
     box-sizing: content-box;
     transition: background-color 0.3s linear;
 
     &:hover {
-      background-color: $accent-color;
+      background-color: var(--special-color);
       overflow: visible;
       > ul.submeniu {
         opacity: 1;
@@ -58,7 +58,7 @@ ul.meniu {
       width: 100%;
       height: 100%;
       line-height: $menu-height;
-      color: $text-color;
+      color: var(--text-color);
       text-decoration: none;
       font-weight: bold;
     }
@@ -69,10 +69,10 @@ ul.meniu {
       top: 0;
       position: absolute;
       // display: block;
-      background-color: $text-color;
+      background-color: var(--text-color);
       width: calc($menu-button-width);
       height: 0.2em;
-      box-shadow: 0 0 0.1em $text-color;
+      box-shadow: 0 0 0.1em var(--text-color);
     }
   }
 }
@@ -84,7 +84,7 @@ ul.submeniu > li {
   flex-basis: $menu-button-width;
   width: $menu-button-width;
   height: $menu-height;
-  background-color: $secondary-color;
+  background-color: var(--primary-color);
   box-sizing: content-box;
   transition: background-color 0.3s linear;
 }

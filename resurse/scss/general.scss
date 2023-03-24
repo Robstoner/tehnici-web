@@ -6,28 +6,28 @@ html {
 @import "globals";
 
 body {
-  background-color: $background-color;
-  color: $text-color;
-  padding-left: $page-padding;
-  padding-right: $page-padding;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
   min-width: 450px;
 }
 
 footer {
-  background-color: $background-color;
-  color: $text-color;
+  background-color: var(--background-color);
+  color: var(--text-color);
   text-align: center;
-  margin-left: calc(-1 * $page-padding);
-  margin-right: calc(-1 * $page-padding);
+  margin-left: calc(-1 * var(--page-padding));
+  margin-right: calc(-1 * var(--page-padding));
 }
 
 footer > a {
-  color: $text-color;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 footer > a:hover {
-  color: $secondary-color;
+  color: var(--primary-color);
 }
 
 #top-btn {
@@ -42,18 +42,18 @@ footer > a:hover {
   line-height: 2rem;
   font-size: 23px;
   text-align: center;
-  border: 1px solid $special-color;
+  border: 1px solid var(--secondary-color);
   border-radius: 50%;
-  color: $special-color;
-  background: $background-color;
+  color: var(--secondary-color);
+  background: var(--background-color);
 }
 
 #top-btn:hover {
   text-decoration: none;
-  background-color: $special-color;
-  color: $background-color;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   transition: all 0.5s linear;
-  box-shadow: 0px 0px 5px 5px $special-color;
+  box-shadow: 0px 0px 5px 5px var(--secondary-color);
   opacity: 1;
 }
 
