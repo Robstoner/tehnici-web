@@ -60,6 +60,21 @@ footer > a:hover {
 img {
   width: 100%;
   max-width: 800px;
+  min-width: 200px;
+}
+
+video {
+  width: 100%;
+  max-width: 800px;
+  min-width: 350px;
+
+  &::cue {
+    background: linear-gradient(to right, $color-dark, var(--special-color));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 2;
+  }
 }
 
 @media screen and (max-width: 1000px) {

@@ -49,7 +49,7 @@ function afisEroare(
 ) {
   let vErori = obGlobal.obErori.info_erori;
   let eroare = vErori.find((eroare) => eroare.identificator == _identificator);
-  console.log(_identificator, eroare);
+
   if (eroare) {
     let titlu1 = _titlu == "titlu default" ? eroare.titlu || _titlu : _titlu;
     let text1 = _text || eroare.text;
@@ -67,9 +67,6 @@ function afisEroare(
 }
 
 app.use(/^\/resurse(\/[a-zA-Z0-9]*(?!\.)[a-zA-Z0-9]*)*$/, (req, res) => {
-  console.log(
-    "==========================================================================="
-  );
   afisEroare(res, "403");
 });
 
@@ -91,7 +88,6 @@ app.get(/\.ejs$/, (req, res) => {
 
 app.get("/*", (req, res) => {
   try {
-    console.log("cv");
     res.render("pagini" + req.url, (err, html) => {
       if (err) {
         if (err.message.includes("Failed to lookup view")) {
