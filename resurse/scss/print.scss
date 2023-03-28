@@ -52,10 +52,30 @@ header {
   page-break-after: always;
 }
 
+#banner-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  // width: 80%;
+  height: 100%;
+  width: 100%;
+  border: 2px dotted black;
+}
+
 @page: left {
   margin-left: 2.5cm;
   margin-right: 0.5cm;
 }
+
 @page: right {
   margin-left: 0.5cm;
   margin-right: 2.5cm;

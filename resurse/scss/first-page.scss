@@ -103,6 +103,7 @@ div.taburi-iframe {
   border: 1px solid var(--special-color);
   border-radius: 5px;
   border-collapse: separate;
+  overflow-x: scroll;
 }
 
 #tabel-produse td,
@@ -134,16 +135,16 @@ th {
 #tabel-produse tr:hover {
   background-color: var(--primary-color);
   transition: background-color 0.5s linear;
+
+  a {
+    color: var(--background-color);
+    transition: color 0.5s linear;
+  }
 }
 
 #tabel-produse td:hover {
   background-color: var(--special-color);
   transition: background-color 0.5s linear;
-}
-
-#tabel-produse td:hover > a {
-  color: var(--background-color);
-  transition: color 0.5s linear;
 }
 
 #tabel-produse tfoot {

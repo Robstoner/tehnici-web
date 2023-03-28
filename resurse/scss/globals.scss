@@ -6,6 +6,8 @@ $accent-color-light: #a682ff;
 $accent-color-dark: #01a7c2;
 $accent-color: #5b3da7;
 
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
 :root {
   --background-color: #{$light-bg};
   --background-color-accent: #{$color-light};
@@ -17,13 +19,14 @@ $accent-color: #5b3da7;
   --page-padding: 1.5em;
   --section-margin: 0.5em;
   --section-padding: 0.5em;
+  font-family: "Fira Sans", sans-serif;
 }
 
 body.dark {
   --background-color: #{$dark-bg};
   --background-color-accent: #{$color-dark};
-  --secondary-color: #{$accent-color-dark};
-  --special-color: #{$accent-color-light};
+  --secondary-color: #{$accent-color-light};
+  --primary-color: #{$accent-color-dark};
 
   --text-color: #{$light-bg};
 }

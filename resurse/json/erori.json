@@ -9,15 +9,29 @@
     {
       "identificator": 404,
       "status": true,
-      "titlu": "404 - N-am, bre!",
-      "text": "Nu-i pe serverul ăsta, sorry, caută în altă parte!",
+      "titlu": "404 - Not found",
+      "text": "Pagina nu a fost gasita.",
       "imagine": "lupa.png"
     },
     {
       "identificator": 403,
       "status": true,
-      "titlu": "403 - Da, tu ce cauți aici?!!",
-      "text": "Ai greșit ruta. Stânga-împrejur și pa!",
+      "titlu": "403 - Forbidden",
+      "text": "Acces interzis.",
+      "imagine": "interzis.png"
+    },
+    {
+      "identificator": 401,
+      "status": true,
+      "titlu": "401 - Unauthorized",
+      "text": "Acces neautorizat.",
+      "imagine": "interzis.png"
+    },
+    {
+      "identificator": 400,
+      "status": true,
+      "titlu": "400 - Bad request",
+      "text": "Cerere gresita.",
       "imagine": "interzis.png"
     },
 
@@ -25,7 +39,7 @@
       "identificator": 1,
       "status": false,
       "titlu": "Site în lucru",
-      "text": "Muncim, muncim!",
+      "text": "Reveniti in curand!",
       "imagine": "interzis.png"
     },
 
