@@ -14,7 +14,10 @@ console.log("Folder proiect: " + __dirname);
 console.log("Cale fisier: " + __filename);
 console.log("Folder curent: " + process.cwd());
 
-foldere = ["temp", "temp1"];
+const folderScss = path.join(__dirname, "resurse/scss");
+const folderCss = path.join(__dirname, "resurse/css");
+
+foldere = ["temp", "backup"];
 
 foldere.forEach((folder) => {
   // let cale = __dirname + "/" + folder;
@@ -27,6 +30,25 @@ foldere.forEach((folder) => {
 app.set("view engine", "ejs");
 
 app.use("/resurse", express.static(path.join(__dirname, "resurse")));
+
+function compileazaScss(caleScss, caleCss) {
+  if (path.isAbsolute(caleScss)) {
+    caleScss = path.relative(folderScss, caleScss);
+  }
+  if (path.isAbsolute(caleCss)) {
+    caleCss = path.relative(folderCss, caleCss);
+  }
+
+  if (fs.existsSync(path.join(folderCss, caleCss))) {
+    fs.writeFileSync(
+      path.join(__dirname, "backup", caleCss),
+      fs.readFileSync(path.join(folderCss, caleCss))
+    );
+  }
+
+  let fis = sass.compile(path.join(folderScss, caleScss));
+  fs.writeFileSync(path.join(folderCss, caleCss), fis.css);
+}
 
 function initErori() {
   var continut = fs
