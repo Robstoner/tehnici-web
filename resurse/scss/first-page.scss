@@ -50,7 +50,7 @@ div.taburi-iframe {
     "z-acasa z-acasa z-acasa z-acasa"
     "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site"
     "z-calendar z-calendar z-best-sellers z-best-sellers"
-    "z-anunturi z-anunturi z-best-sellers z-best-sellers"
+    "z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers"
     "z-detalii z-detalii z-detalii z-detalii";
 }
 
@@ -66,8 +66,8 @@ div.taburi-iframe {
   grid-area: z-calendar;
 }
 
-#anunturi {
-  grid-area: z-anunturi;
+#galerie-statica {
+  grid-area: z-galerie-statica;
 }
 
 #utilizatori-online {
@@ -166,7 +166,7 @@ th {
       "z-acasa z-acasa z-acasa"
       "z-utilizatori-online z-utilizatori-stats z-date-site"
       "z-calendar z-best-sellers z-best-sellers"
-      "z-anunturi z-best-sellers z-best-sellers"
+      "z-galerie-statica z-best-sellers z-best-sellers"
       "z-detalii z-detalii z-detalii";
   }
 }

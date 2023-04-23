@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Robstoner/tehnici-web#readme",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sharp": "^0.32.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.21",

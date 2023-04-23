@@ -10,6 +10,7 @@
   <%- include('../fragmente/head') %>
 
   <link rel="stylesheet" href="/resurse/css/first-page.css" type="text/css" />
+  <link rel="stylesheet" href="/resurse/css/galerie-statica.css" type="text/css" />
   <link rel="stylesheet" href="/resurse/css/print.css" type="text/css" media="print" />
 
 </head>
@@ -96,10 +97,8 @@
       delectus necessitatibus iste eos quae, cupiditate sint aspernatur nobis quam praesentium tenetur dolorum
       libero quidem.
     </section>
-    <section id="anunturi">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt culpa quis iusto at sed reiciendis
-      neque
-      rem amet, ullam dolores dolor alias libero, sapiente nemo explicabo possimus, error tempore voluptates.
+    <section id="galerie-statica">
+      <%- include ('../fragmente/galerie') %>
     </section>
     <section id="ultilizatori-online">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias velit sunt assumenda ipsa sequi
@@ -108,9 +107,6 @@
       minima ut vero sed.
     </section>
     <section id="utilizatori-stats">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nam tempore soluta libero harum? Itaque
-      alias
-      sint nobis? Deserunt ullam odit libero sequi nihil cum repellat temporibus nulla. Dolorum, sit.
       <p>Ip-ul utilizatorului: <%- locals.ip %></p>
     </section>
     <section id="date-site">

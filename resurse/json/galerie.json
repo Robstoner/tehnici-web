@@ -1,0 +1,59 @@
+{
+  "cale_galerie": "resurse/imagini/galerie",
+  "imagini": [
+    {
+      "fisier": "computer.jpg",
+      "titlu": "Birou computer",
+      "descriere": "Un birou plin de electronice printre care si un computer",
+      "sfert_ora": "3"
+    },
+    {
+      "fisier": "computer2.png",
+      "titlu": "Computer",
+      "descriere": "Un computer de ultima generatie",
+      "sfert_ora": "2"
+    },
+    {
+      "fisier": "iphone.jpg",
+      "titlu": "Telefon",
+      "descriere": "Un telefon de ultima generatie",
+      "sfert_ora": "4"
+    },
+    {
+      "fisier": "iphone2.jpg",
+      "titlu": "Telefon",
+      "descriere": "Un telefon de ultima generatie",
+      "sfert_ora": "3"
+    },
+    {
+      "fisier": "laptop.jpg",
+      "titlu": "Laptop",
+      "descriere": "Un laptop de ultima generatie",
+      "sfert_ora": "1"
+    },
+    {
+      "fisier": "monitor.jpg",
+      "titlu": "Monitor",
+      "descriere": "Un monitor de ultima generatie",
+      "sfert_ora": "3"
+    },
+    {
+      "fisier": "smart-watch.jpg",
+      "titlu": "Smart Watch",
+      "descriere": "Un smart watch de ultima generatie",
+      "sfert_ora": "2"
+    },
+    {
+      "fisier": "student.jpg",
+      "titlu": "Laptop student",
+      "descriere": "Un laptop in folosinta",
+      "sfert_ora": "2"
+    },
+    {
+      "fisier": "tablet.jpg",
+      "titlu": "Tableta",
+      "descriere": "O tableta de ultima generatie",
+      "sfert_ora": "1"
+    }
+  ]
+}

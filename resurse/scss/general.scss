@@ -19,15 +19,14 @@ footer {
   text-align: center;
   margin-left: calc(-1 * var(--page-padding));
   margin-right: calc(-1 * var(--page-padding));
-}
 
-footer > a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-footer > a:hover {
-  color: var(--primary-color);
+  > a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  > a:hover {
+    color: var(--primary-color);
+  }
 }
 
 #top-btn {
@@ -46,15 +45,15 @@ footer > a:hover {
   border-radius: 50%;
   color: var(--secondary-color);
   background: var(--background-color);
-}
 
-#top-btn:hover {
-  text-decoration: none;
-  background-color: var(--secondary-color);
-  color: var(--background-color);
-  transition: all 0.5s linear;
-  box-shadow: 0px 0px 5px 5px var(--secondary-color);
-  opacity: 1;
+  &:hover {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    transition: all 0.5s linear;
+    box-shadow: 0px 0px 5px 5px var(--secondary-color);
+    opacity: 1;
+  }
 }
 
 img {
@@ -75,6 +74,23 @@ video {
     -webkit-background-clip: text;
     line-height: 2;
   }
+}
+
+#err-imag img {
+  width: 100%;
+}
+#err-coloane {
+  display: flex;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+#err-coloane section {
+  font-size: 2em;
+  padding-left: 1em;
+}
+#err-coloane h2 {
+  font-size: 2em;
 }
 
 @media screen and (max-width: 1000px) {
