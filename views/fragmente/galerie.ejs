@@ -1,25 +1,33 @@
 <div id="grid-galerie">
-  <% c = 0;
+  <% c = 1;
    for (let imag of locals.imagini) { 
-    d = new Date();
-    minutes = d.getMinutes();
-    if (((minutes >= 0 && minutes < 15 && imag.sfert_ora == 1) ||
-        (minutes >= 15 && minutes < 30 && imag.sfert_ora==2) || 
-        (minutes>= 30 && minutes < 45 && imag.sfert_ora==3) || 
-        (minutes>= 45 && minutes < 60 && imag.sfert_ora==4)) && c < 10) { c++; %>
+    if (c == 5 || c == 8) { %>
+  <div></div>
+  <% } %>
+  d = new Date();
+  minutes = d.getMinutes();
+  if (((minutes >= 0 && minutes
 
-  <div class="imagine-galerie-statica">
-    <figure>
-      <picture>
-        <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
-        <source srcset="<%- imag.fisier_mic %>" media="(max-width:500px)" />
+  < 15 && imag.sfert_ora==1) || (minutes>= 15 && minutes
 
-        <img src="<%- imag.fisier %>" alt="imagine">
-      </picture>
-      <figcaption><%- imag.descriere %></figcaption>
-    </figure>
-  </div>
-  <% }  %>
+    < 30 && imag.sfert_ora==2) || (minutes>= 30 && minutes
 
-  <% }  %>
+      < 45 && imag.sfert_ora==3) || (minutes>= 45 && minutes
+
+        < 60 && imag.sfert_ora==4)) && c <=10) { c++; %>
+
+          <div class="imagine-galerie-statica">
+            <figure>
+              <picture>
+                <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                <source srcset="<%- imag.fisier_mic %>" media="(max-width:500px)" />
+
+                <img src="<%- imag.fisier %>" alt="imagine">
+              </picture>
+              <figcaption><%- imag.descriere %></figcaption>
+            </figure>
+          </div>
+          <% }  %>
+
+          <% }  %>
 </div>

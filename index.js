@@ -7,6 +7,8 @@ const sharp = require("sharp");
 obGlobal = {
   obErori: null,
   obImagini: null,
+  folderScss: path.join(__dirname, "resurse/scss"),
+  folderCss: path.join(__dirname, "resurse/css"),
 };
 
 app = express();
@@ -14,9 +16,6 @@ app = express();
 console.log("Folder proiect: " + __dirname);
 console.log("Cale fisier: " + __filename);
 console.log("Folder curent: " + process.cwd());
-
-const folderScss = path.join(__dirname, "resurse/scss");
-const folderCss = path.join(__dirname, "resurse/css");
 
 foldere = ["temp", "backup"];
 
@@ -41,11 +40,11 @@ app.get(/\.ejs$/, (req, res) => {
 });
 
 function compileazaScss(caleScss, caleCss) {
-  if (path.isAbsolute(caleScss)) {
-    caleScss = path.relative(folderScss, caleScss);
+  if (!path.isAbsolute(caleScss)) {
+    caleScss = path.join(obGlobal.folderScss, caleScss);
   }
-  if (path.isAbsolute(caleCss)) {
-    caleCss = path.relative(folderCss, caleCss);
+  if (!path.isAbsolute(caleCss)) {
+    caleCss = path.join(obGlobal.folderCss, caleCss);
   }
 
   if (fs.existsSync(path.join(folderCss, caleCss))) {
