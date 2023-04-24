@@ -205,8 +205,7 @@ function afisEroare(
 
 function compileazaScss(caleScss, caleCss) {
   if (!caleCss) {
-    let vectorCale = caleScss.split("\\");
-    let numeFisExt = vectorCale[vectorCale.length - 1];
+    let numeFisExt = path.basename(caleScss);
 
     let numeFis = numeFisExt.split(".")[0];
     caleCss = numeFis + ".css";
@@ -219,10 +218,14 @@ function compileazaScss(caleScss, caleCss) {
     caleCss = path.join(obGlobal.folderCss, caleCss);
   }
 
-  let vectorCale = caleCss.split("\\");
-  let numeFisCss = vectorCale[vectorCale.length - 1];
+  let caleBackup = path.join(obGlobal.folderBackup, "resurse/css");
+  if (!fs.existsSync(caleBackup)) {
+    fs.mkdirSync(caleBackup, { recursive: true });
+  }
+
+  let numeFisCss = path.basename(caleCss);
   if (fs.existsSync(caleCss)) {
-    fs.copyFileSync(caleCss, path.join(obGlobal.folderBackup, numeFisCss));
+    fs.copyFileSync(caleCss, path.join(caleBackup, numeFisCss));
   }
 
   rez = sass.compile(caleScss, { sourceMap: true });
