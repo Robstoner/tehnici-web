@@ -8,9 +8,19 @@
   <title>Magazin de electronice</title>
 
   <%- include('../fragmente/head') %>
+
+  <link rel="stylesheet" href="/resurse/css/despre.css" type="text/css" />
+
+  <script>
+    function copyDiv() {
+      var firstDivContent = document.getElementById('text');
+      var secondDivContent = document.getElementById('text-reflectat');
+      secondDivContent.innerHTML = firstDivContent.innerHTML;
+    }
+  </script>
 </head>
 
-<body class="dark">
+<body class="dark" onload="copyDiv()">
 
   <%- include('../fragmente/header') %>
 
@@ -30,6 +40,12 @@
       <track src="resurse/acasa/video-en.vtt" kind="subtitles" srclang="en" label="English">
       Your browser does not support the video tag.
     </video>
+
+    <div id="text">
+      Textul este reflectat.
+      <div id="text-reflectat"></div>
+    </div>
+
   </main>
 
   <% include ('../fragmente/footer') %>

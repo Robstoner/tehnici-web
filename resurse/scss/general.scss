@@ -29,6 +29,32 @@ footer {
   }
 }
 
+#hr-footer {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--special-color) 50%,
+    transparent
+  );
+  border: none;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 0.75em;
+    height: 1em;
+    background: radial-gradient(
+      var(--special-color),
+      var(--special-color) 50%,
+      var(--secondary-color) 50%,
+      var(--secondary-color) 100%
+    );
+    padding: 0 0.3em;
+    border-radius: 100%;
+  }
+}
+
 #top-btn {
   position: fixed;
   bottom: 0.8em;
@@ -60,20 +86,6 @@ img {
   width: 100%;
   max-width: 800px;
   min-width: 200px;
-}
-
-video {
-  width: 100%;
-  max-width: 800px;
-  min-width: 350px;
-
-  &::cue {
-    background: linear-gradient(to right, $color-dark, var(--special-color));
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    line-height: 2;
-  }
 }
 
 #err-imag img {
