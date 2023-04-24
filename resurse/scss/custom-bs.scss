@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+$fonts: "Fira Sans", sans-serif;
+
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $primary: #a682ff,
   $secondary: #01a7c2,
@@ -37,5 +41,5 @@
     5: 1rem,
     6: 0.5rem,
   ),
-  $font-family-base: var(--#{$prefix}font-sans-serif)
+  $font-family-base: $fonts
 );
