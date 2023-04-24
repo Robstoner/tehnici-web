@@ -3,7 +3,7 @@
    for (let imag of locals.imagini) { 
     if (c == 5 || c == 8) { %>
   <div></div>
-  <% } %>
+  <% }
   d = new Date();
   minutes = d.getMinutes();
   if (((minutes >= 0 && minutes
@@ -16,18 +16,18 @@
 
         < 60 && imag.sfert_ora==4)) && c <=10) { c++; %>
 
-          <div class="imagine-galerie-statica">
-            <figure>
-              <picture>
-                <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
-                <source srcset="<%- imag.fisier_mic %>" media="(max-width:500px)" />
+  <div class="imagine-galerie-statica">
+    <figure>
+      <picture>
+        <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+        <source srcset="<%- imag.fisier_mic %>" media="(max-width:500px)" />
 
-                <img src="<%- imag.fisier %>" alt="imagine">
-              </picture>
-              <figcaption><%- imag.descriere %></figcaption>
-            </figure>
-          </div>
-          <% }  %>
+        <img src="<%- imag.fisier %>" alt="imagine">
+      </picture>
+      <figcaption><%- imag.descriere %></figcaption>
+    </figure>
+  </div>
+  <% }  %>
 
-          <% }  %>
+  <% }  %>
 </div>
