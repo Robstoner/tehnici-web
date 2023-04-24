@@ -7,6 +7,7 @@ const sharp = require("sharp");
 obGlobal = {
   obErori: null,
   obImagini: null,
+  folderBackup: path.join(__dirname, "backup"),
   folderScss: path.join(__dirname, "resurse/scss"),
   folderCss: path.join(__dirname, "resurse/css"),
 };
@@ -38,25 +39,6 @@ app.use(/^\/resurse(\/[a-zA-Z0-9]*(?!\.)[a-zA-Z0-9]*)*$/, (req, res) => {
 app.get(/\.ejs$/, (req, res) => {
   afisEroare(res, "400");
 });
-
-function compileazaScss(caleScss, caleCss) {
-  if (!path.isAbsolute(caleScss)) {
-    caleScss = path.join(obGlobal.folderScss, caleScss);
-  }
-  if (!path.isAbsolute(caleCss)) {
-    caleCss = path.join(obGlobal.folderCss, caleCss);
-  }
-
-  if (fs.existsSync(path.join(folderCss, caleCss))) {
-    fs.writeFileSync(
-      path.join(__dirname, "backup", caleCss),
-      fs.readFileSync(path.join(folderCss, caleCss))
-    );
-  }
-
-  let fis = sass.compile(path.join(folderScss, caleScss));
-  fs.writeFileSync(path.join(folderCss, caleCss), fis.css);
-}
 
 app.get("/favicon.ico", (req, res) => {
   res.sendFile("favicon.ico", { root: __dirname + "/resurse/ico" });
@@ -174,6 +156,41 @@ function afisEroare(
     res.render("pagini/eroare", obGlobal.eroare_default);
   }
 }
+
+function compileazaScss(caleScss, caleCss) {
+  if (!caleCss) {
+    let vectorCale = caleScss.split("\\");
+    let numeFisExt = vectorCale[vectorCale.length - 1];
+
+    let numeFis = numeFisExt.split(".")[0];
+    caleCss = numeFis + ".css";
+  }
+
+  if (!path.isAbsolute(caleScss)) {
+    caleScss = path.join(obGlobal.folderScss, caleScss);
+  }
+  if (!path.isAbsolute(caleCss)) {
+    caleCss = path.join(obGlobal.folderCss, caleCss);
+  }
+
+  let vectorCale = caleCss.split("\\");
+  let numeFisCss = vectorCale[vectorCale.length - 1];
+  if (fs.existsSync(caleCss)) {
+    fs.copyFileSync(caleCss, path.join(obGlobal.folderBackup, numeFisCss));
+  }
+
+  rez = sass.compile(caleScss, { sourceMap: true });
+  fs.writeFileSync(caleCss, rez.css);
+}
+
+fs.watch(obGlobal.folderScss, (eveniment, fisier) => {
+  if (eveniment == "change" || eveniment == "rename") {
+    let caleCompleta = path.join(obGlobal.folderScss, fisier);
+    if (fs.existsSync(caleCompleta)) {
+      compileazaScss(caleCompleta);
+    }
+  }
+});
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
