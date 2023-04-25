@@ -34,7 +34,7 @@ app.set("view engine", "ejs");
 app.use("/resurse", express.static(path.join(__dirname, "resurse")));
 
 app.use(/^\/resurse(\/[a-zA-Z0-9]*(?!\.)[a-zA-Z0-9]*)*$/, (req, res) => {
-  afisEroare(res, "403");
+  afisEroare(res, 403);
 });
 
 app.get(/\.ejs$/, (req, res) => {

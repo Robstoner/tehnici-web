@@ -1,7 +1,7 @@
 <div id="grid-galerie">
   <% c = 1;
    for (let imag of locals.imagini) { 
-    if (c == 5 || c == 8) { %>
+    if (c == 5 || c == 7) { %>
   <div></div>
   <% }
   d = new Date();
@@ -14,7 +14,7 @@
 
       < 45 && imag.sfert_ora==3) || (minutes>= 45 && minutes
 
-        < 60 && imag.sfert_ora==4)) && c <=10) { c++; %>
+        < 60 && imag.sfert_ora==4) || true) && c <=10) { c++; %>
 
   <div class="imagine-galerie-statica">
     <figure>
