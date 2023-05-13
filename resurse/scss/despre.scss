@@ -19,9 +19,13 @@ video {
   left: 0;
   top: 100%;
   transform-origin: 0 0;
-  /*conetaza ordinea transformarilor!*/
   transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
   opacity: 0.55;
+
+  &:hover {
+    transform: rotateX(180deg) skew(-45deg) scaleY(1) translate(10px, -25px);
+    transition: all 0.5s ease;
+  }
 }
 
 #text {
