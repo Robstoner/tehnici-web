@@ -17,17 +17,66 @@ nav {
   top: 0;
 }
 
-#dark-switch {
+// #dark-switch {
+//   position: absolute;
+//   right: 1.5%;
+//   top: 0;
+//   height: $menu-height;
+//   width: $menu-height;
+//   background-color: var(--primary-color);
+//   border: 0;
+//   cursor: pointer;
+//   i {
+//     color: var(--text-color);
+//   }
+// }
+
+#darkmode-label {
+  width: 3em;
+  height: 1.5em;
   position: absolute;
+  top: 10%;
   right: 1.5%;
-  top: 0;
-  height: $menu-height;
-  width: $menu-height;
-  background-color: var(--primary-color);
-  border: 0;
+  display: flex;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  i {
-    color: var(--text-color);
+
+  &:after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active:after {
+    width: 1.25em;
+  }
+}
+
+#darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+
+  &:checked + label {
+    background: #242424;
+  }
+  &:checked + label:after {
+    left: 95%;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+  }
+  label,
+  label:after {
+    transition: 0.3s;
   }
 }
 

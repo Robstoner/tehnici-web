@@ -34,7 +34,13 @@
       "text": "Cerere gresita.",
       "imagine": "interzis.png"
     },
-
+    {
+      "identificator": 500,
+      "status": true,
+      "titlu": "500 - Internal Server Error",
+      "text": "Eroare interna server.",
+      "imagine": "lupa.png"
+    },
     {
       "identificator": 1,
       "status": false,

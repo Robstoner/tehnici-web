@@ -19,11 +19,11 @@
     </li>
     <li>
       <span class="menu-bar"></span>
-      <div href="#produse">Produse</div>
+      <a href="/produse">Produse</a>
       <ul class="submeniu">
-        <li><a href="telefoane.html">Telefoane</a></li>
-        <li><a href="laptopuri.html">Laptopuri</a></li>
-        <li><a href="tablete.html">Tablete</a></li>
+        <% for (let categorie of locals.categorii) { %>
+        <li><a href="/produse?categ=<%- categorie %>"><%- categorie %></a></li>
+        <% } %>
       </ul>
     </li>
     <li>
@@ -40,12 +40,37 @@
     </li>
   </ul>
 
-  <button id="dark-switch" onclick="darkMode()"><i class="fas fa-regular fa-moon"></i></button>
+  <input type="checkbox" id="darkmode-toggle" />
+  <label id="darkmode-label" for="darkmode-toggle">
+
+    <script>
+      var darkmode = localStorage.getItem('darkmode');
+      if (darkmode == 'true') {
+        document.getElementById('darkmode-toggle').checked = true;
+        document.body.classList.add('dark');
+      } else {
+        document.getElementById('darkmode-toggle').checked = false;
+        document.body.classList.remove('dark');
+      }
+
+      document.getElementById('darkmode-toggle').addEventListener('change', function() {
+        if (this.checked) {
+          document.body.classList.add('dark');
+          localStorage.setItem('darkmode', 'true');
+        } else {
+          document.body.classList.remove('dark');
+          localStorage.setItem('darkmode', 'false');
+        }
+      });
+    </script>
+
+    <!-- <button id="dark-switch" onclick="darkMode()"><i class="fas fa-regular fa-moon"></i></button>
 
   <script>
     function darkMode() {
       var element = document.body;
       element.classList.toggle("dark");
+
     }
-  </script>
+  </script> -->
 </nav>

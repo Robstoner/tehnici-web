@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+  <meta name="keywords" content="proiect, tehnici web, HTML, CSS, electronice, magazin, magazin electronice, vanzare, componente, telefon, produse">
+  <meta name="description" content="Magazin de electronice. Proiect pentru cursul de Tehnici Web.">
+  <title>Produse</title>
+
+  <%- include('../fragmente/head') %>
+
+</head>
+
+<body class="dark">
+  <%- include('../fragmente/header') %>
+
+  <main>
+    <h2>Produse</h2>
+    <div class="produse">
+      <% for (let produs of locals.produse) { %>
+      <div class="produs">
+        <a href="/produse/<%- produs.id %>">
+          <img src="<%- produs.poza %>" alt="<%- produs.nume %>">
+          <h3><%- produs.nume %></h3>
+          <p><%- produs.pret %> lei</p>
+        </a>
+      </div>
+      <% } %>
+  </main>
+
+  <%- include ('../fragmente/footer') %>
+</body>
+
+</html>

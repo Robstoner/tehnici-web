@@ -4,10 +4,21 @@ const sass = require("sass");
 const path = require("path");
 const sharp = require("sharp");
 const { randomInt } = require("crypto");
+const { Client } = require("pg");
+
+var client = new Client({
+  host: "localhost",
+  port: 5432,
+  database: "magazin",
+  user: "rob",
+  password: "1234",
+});
+client.connect();
 
 obGlobal = {
   obErori: null,
   obImagini: null,
+  categorii: new Set(),
   folderBackup: path.join(__dirname, "backup"),
   folderScss: path.join(__dirname, "resurse/scss"),
   folderCss: path.join(__dirname, "resurse/css"),
@@ -49,6 +60,7 @@ app.get(["/", "/index", "/home"], (req, res) => {
   res.render("pagini/index", {
     ip: req.ip,
     imagini: obGlobal.obImagini.imagini,
+    categorii: obGlobal.categorii,
   });
 });
 
@@ -72,28 +84,85 @@ app.get("/galerie", (req, res) => {
     imagini: obGlobal.obImagini.imagini,
     nrImagini: nrImagini,
     imgInv: imgInv,
+    categorii: obGlobal.categorii,
+  });
+});
+
+app.get("/produse", async (req, res) => {
+  let produse = [];
+
+  if (req.query.categ) {
+    let categ = req.query.categ;
+    rez = await client.query("select * from produse where categorie = $1", [
+      categ,
+    ]);
+    produse = rez.rows;
+  } else {
+    rez = await client.query("select * from produse");
+    produse = rez.rows;
+  }
+
+  res.render("pagini/produse", {
+    categorii: obGlobal.categorii,
+    produse: produse,
+  });
+});
+
+app.get("/produse/:id", (req, res) => {
+  let id = req.params.id;
+  let produs = null;
+  client.query("select * from produse where id = $1", [id], (err, rez) => {
+    if (err) {
+      afisEroare(res, "500");
+    } else {
+      if (rez.rows.length == 0) {
+        afisEroare(res, "404");
+      } else {
+        produs = rez.rows[0];
+        console.log(produs);
+        res.render("pagini/produs", {
+          categorii: obGlobal.categorii,
+          produs: produs,
+        });
+      }
+    }
   });
 });
 
 app.get("/*", (req, res) => {
   try {
-    res.render("pagini" + req.url, (err, html) => {
-      if (err) {
-        if (err.message.includes("Failed to lookup view")) {
-          afisEroare(res, "404");
+    res.render(
+      "pagini" + req.url,
+      { categorii: obGlobal.categorii },
+      (err, html) => {
+        if (err) {
+          if (err.message.includes("Failed to lookup view")) {
+            afisEroare(res, "404");
+          } else {
+            afisEroare(res);
+          }
         } else {
-          afisEroare(res);
+          res.send(html);
         }
-      } else {
-        res.send(html);
       }
-    });
+    );
   } catch (err) {
     if (err.message.includes("Cannot find module")) {
       afisEroare(res, "404");
     }
   }
 });
+
+async function initCategorii() {
+  let rezultat = await client.query("select * from produse");
+
+  rezultat.rows.forEach((produs) => {
+    produs.poza = "/resurse/imagini/produse" + produs.poza;
+    obGlobal.categorii.add(produs.categorie);
+  });
+}
+
+initCategorii();
 
 function initImagini() {
   var continut = fs
@@ -170,6 +239,7 @@ function afisEroare(
       titlu: titlu1,
       text: text1,
       imagine: imagine1,
+      categorii: obGlobal.categorii,
     });
   } else {
     res.render("pagini/eroare", obGlobal.eroare_default);

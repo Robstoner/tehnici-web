@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+  <meta name="keywords" content="proiect, tehnici web, HTML, CSS, electronice, magazin, magazin electronice, vanzare, componente, telefon, produse">
+  <meta name="description" content="Magazin de electronice. Proiect pentru cursul de Tehnici Web.">
+  <title><%- locals.produs.nume %></title>
+
+  <%- include('../fragmente/head') %>
+
+</head>
+
+<body class="dark">
+  <%- include('../fragmente/header') %>
+
+  <main>
+    <h2><%-  locals.produs.nume %></h2>
+    <div class="produs">
+      <img src="<%- locals.produs.poza %>" alt="<%- locals.produs.nume %>">
+      <p><%- locals.produs.descriere %></p>
+      <p><%- locals.produs.pret %> lei</p>
+      <p><%- locals.produs.categorie %></p>
+      <p><%- locals.produs.dimensiuni %></p>
+      <button>Adauga in cos</button>
+    </div>
+  </main>
+
+  <%- include ('../fragmente/footer') %>
+</body>
+
+</html>
