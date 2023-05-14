@@ -44,22 +44,22 @@
   <label id="darkmode-label" for="darkmode-toggle">
 
     <script>
-      var darkmode = localStorage.getItem('darkmode');
-      if (darkmode == 'true') {
-        document.getElementById('darkmode-toggle').checked = true;
-        document.body.classList.add('dark');
-      } else {
+      var theme = localStorage.getItem('data-theme');
+      if (theme == 'light') {
         document.getElementById('darkmode-toggle').checked = false;
-        document.body.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else if (theme == 'dark') {
+        document.getElementById('darkmode-toggle').checked = true;
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
 
       document.getElementById('darkmode-toggle').addEventListener('change', function() {
         if (this.checked) {
-          document.body.classList.add('dark');
-          localStorage.setItem('darkmode', 'true');
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('data-theme', 'dark');
         } else {
-          document.body.classList.remove('dark');
-          localStorage.setItem('darkmode', 'false');
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('data-theme', 'light');
         }
       });
     </script>

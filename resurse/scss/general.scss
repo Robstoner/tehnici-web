@@ -33,7 +33,7 @@ footer {
   background: linear-gradient(
     to bottom,
     transparent,
-    var(--special-color) 50%,
+    var(--accent-color) 50%,
     transparent
   );
   border: none;
@@ -45,8 +45,8 @@ footer {
     width: 0.75em;
     height: 1em;
     background: radial-gradient(
-      var(--special-color),
-      var(--special-color) 50%,
+      var(--accent-color),
+      var(--accent-color) 50%,
       var(--secondary-color) 50%,
       var(--secondary-color) 100%
     );

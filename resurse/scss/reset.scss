@@ -171,7 +171,7 @@ h6 {
 }
 
 a {
-  color: var(--special-color);
+  color: var(--accent-color);
   text-decoration: none;
 
   &:hover {
@@ -193,13 +193,4 @@ a {
       color: var(--secondary-color);
     }
   }
-}
-
-main a:hover {
-  background: radial-gradient(
-    var(--secondary-color) 0%,
-    var(--secondary-color) 40%,
-    transparent 80%,
-    transparent 100%
-  );
 }
