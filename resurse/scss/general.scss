@@ -6,16 +6,16 @@ html {
 @import "globals";
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
   min-width: 450px;
 }
 
 footer {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
   text-align: center;
   margin-left: calc(-1 * var(--page-padding));
   margin-right: calc(-1 * var(--page-padding));
@@ -42,7 +42,7 @@ footer {
     content: "";
     display: inline-block;
     position: relative;
-    width: 0.75em;
+    width: 1em;
     height: 1em;
     background: radial-gradient(
       var(--accent-color),
@@ -50,8 +50,7 @@ footer {
       var(--secondary-color) 50%,
       var(--secondary-color) 100%
     );
-    padding: 0 0.3em;
-    border-radius: 100%;
+    border-radius: 70%;
   }
 }
 

@@ -9,6 +9,8 @@
 
   <%- include('../fragmente/head') %>
 
+  <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+
 </head>
 
 <body class="dark">
@@ -16,16 +18,90 @@
 
   <main>
     <h2>Produse</h2>
-    <div class="produse">
-      <% for (let produs of locals.produse) { %>
-      <div class="produs">
-        <a href="/produse/<%- produs.id %>">
-          <img src="<%- produs.poza %>" alt="<%- produs.nume %>">
-          <h3><%- produs.nume %></h3>
-          <p><%- produs.pret %> lei</p>
-        </a>
+    <div class="container-fluid search-produse">
+      <div class="row">
+        <div class="col-sm">
+          <label for="cheie">Cuvinte cheie</label>
+          <input type="text" list="cuvinte-cheie" id="cheie" name="cheie" placeholder="Cauta dupa cuvinte cheie">
+
+          <datalist id="cuvinte-cheie">
+            <% for (let categorie of locals.categorii) { %>
+            <option value="<%- categorie %>">
+              <% } %>
+          </datalist>
+        </div>
+        <div class="col-sm">
+          <label for="nume">Nume</label>
+          <input type="textarea" id="nume" name="nume" placeholder="Cauta dupa nume">
+        </div>
+        <div class="col-sm">
+          <label for="noutati">Noutati</label>
+          <input type="checkbox" id="noutati" name="noutati" value="noutati">
+        </div>
+        <div class="col-sm">
+          <label for="pret">Pret</label>
+          <span>0</span>
+          <input type="range" id="pret" name="pret" min="0" max="10000" value="0" step="100">
+          <span>10000</span>
+        </div>
+      </div>
+      <div class="row">
+
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <% if (locals.produse.length == 0) { %>
+      <p>Nu exista produse care sa corespunda criteriilor de cautare.</p>
+      <% } c=0; for (let produs of locals.produse) { %>
+
+      <% if (c % 3 == 0) { %>
+      <div class="row produse-row">
+        <% } c++;%>
+
+        <div class="col-sm-4">
+          <article class="produs" id="artc-<%- produs.id %>">
+            <h3><%- produs.nume %></h3>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="<%- produs.poza %>" alt="<%- produs.nume %>">
+
+                <ul class="detalii-produs">
+                  <li>
+                    <p><span class="lista-detalii-produs">Pret: </span><%- produs.pret %></p>
+                  </li>
+                  <li>
+                    <p><span class="lista-detalii-produs">Dimensiuni: </span><%- produs.dimensiuni %></p>
+                  </li>
+                  <li>
+                    <p><span class="lista-detalii-produs">Accesorii: </span><%- produs.accesorii %></p>
+                  </li>
+                  <li>
+                    <p><span class="lista-detalii-produs">Data lansarii: </span><time datetime="<%- produs.dataLansare.toISOString().split('T')[0] %>"><%- produs.dataLansare.toISOString().split('T')[0] %></time></p>
+                  </li>
+                  <li>
+                    <p><span class="lista-detalii-produs">Fragil: </span><% if (produs.fragil) { %> Da <% } else { %> Nu <% } %></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <p><span class="lista-detalii-produs">Categorie: </span><%- produs.categorie %></p>
+                <p><span class="lista-detalii-produs">Subcategorie: </span><%- produs.subcategorie %></p>
+                <p><span class="lista-detalii-produs">Descriere: </span><%- produs.descriere %></p>
+              </div>
+            </div>
+
+          </article>
+        </div>
+
+        <% if (c % 3 == 0) { %>
       </div>
       <% } %>
+
+      <% } %>
+    </div>
+
   </main>
 
   <%- include ('../fragmente/footer') %>

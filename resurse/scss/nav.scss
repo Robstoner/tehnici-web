@@ -1,5 +1,6 @@
 @import "globals";
 
+@import "custom-bs";
 #hamburger,
 #ch-menu {
   display: none;
@@ -16,20 +17,6 @@ nav {
   position: sticky;
   top: 0;
 }
-
-// #dark-switch {
-//   position: absolute;
-//   right: 1.5%;
-//   top: 0;
-//   height: $menu-height;
-//   width: $menu-height;
-//   background-color: var(--primary-color);
-//   border: 0;
-//   cursor: pointer;
-//   i {
-//     color: var(--text-color);
-//   }
-// }
 
 #darkmode-label {
   width: 3em;
@@ -90,6 +77,7 @@ ul.meniu {
     transition: all 0.5s linear;
     transform: scale(0, 0);
     transform-origin: center;
+    padding: 0;
   }
   li {
     text-align: center;
@@ -158,6 +146,7 @@ ul.submeniu > li {
   background-color: var(--accent-color);
   box-sizing: content-box;
   transition: background-color 0.3s linear;
+  padding: 0;
 }
 
 #acasa-mediu {
