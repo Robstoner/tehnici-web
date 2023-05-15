@@ -3,9 +3,8 @@ $fonts: "Fira Sans", sans-serif;
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $primary: rgb(88, 33, 255),
   $secondary: rgb(215, 215, 215),
-  $body-bg: #ffffff,
-  $body-color: #141313,
-
+  $body-bg: rgb(252, 252, 252),
+  $body-color: rgb(0, 0, 0),
   $grid-breakpoints: (
     xs: 0,
     sm: 500px,
@@ -15,6 +14,9 @@ $fonts: "Fira Sans", sans-serif;
     xxl: 1400px,
   ),
 
+  $input-group-addon-bg: rgb(88, 33, 255),
+  $input-group-addon-border-color: rgb(0, 209, 237),
+  $input-group-addon-color: rgb(252, 252, 252),
   $container-max-widths: (
     sm: 470px,
     md: 660px,

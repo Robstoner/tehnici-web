@@ -35,72 +35,106 @@
           <input type="textarea" id="nume" name="nume" placeholder="Cauta dupa nume">
         </div>
         <div class="col-sm">
-          <label for="noutati">Noutati</label>
-          <input type="checkbox" id="noutati" name="noutati" value="noutati">
+          <label for="subcategorie">Subcategorie</label>
+          <select id="subcategorie" name="subcategorie">
+            <option value="toate">Toate</option>
+            <% for (let subcategorie of locals.subcategorii) { %>
+            <option value="<%- subcategorie %>"><%- subcategorie %></option>
+            <% } %>
+          </select>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-1">
+          <label for="noutati">Noutati</label>
+          <!-- <input type="checkbox" id="noutati" name="noutati" value="noutati"> -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Noutati</button>
+
+        </div>
+        <div class="col-sm-3">
           <label for="pret">Pret</label>
-          <span>0</span>
-          <input type="range" id="pret" name="pret" min="0" max="10000" value="0" step="100">
-          <span>10000</span>
+          <div class="input-group ">
+            <span class="input-group-text">0</span>
+            <input type="range" class="form-range" id="pret" name="pret" min="0" max="10000" value="0" step="1">
+            <span class="input-group-text">10000</span>
+          </div>
         </div>
       </div>
       <div class="row">
-
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <% if (locals.produse.length == 0) { %>
-      <p>Nu exista produse care sa corespunda criteriilor de cautare.</p>
-      <% } c=0; for (let produs of locals.produse) { %>
-
-      <% if (c % 3 == 0) { %>
-      <div class="row produse-row">
-        <% } c++;%>
-
         <div class="col-sm-4">
-          <article class="produs" id="artc-<%- produs.id %>">
-            <h3><%- produs.nume %></h3>
+          <label for="acesorii">Accesorii</label>
+          <select id="accesorii" name="accesorii" multiple>
+            <option value="incarcator">Incarcator</option>
+            <option value="casti">Casti</option>
+            <option value="husa">Husa</option>
 
-            <div class="row">
-              <div class="col-sm-6">
-                <img src="<%- produs.poza %>" alt="<%- produs.nume %>">
-
-                <ul class="detalii-produs">
-                  <li>
-                    <p><span class="lista-detalii-produs">Pret: </span><%- produs.pret %></p>
-                  </li>
-                  <li>
-                    <p><span class="lista-detalii-produs">Dimensiuni: </span><%- produs.dimensiuni %></p>
-                  </li>
-                  <li>
-                    <p><span class="lista-detalii-produs">Accesorii: </span><%- produs.accesorii %></p>
-                  </li>
-                  <li>
-                    <p><span class="lista-detalii-produs">Data lansarii: </span><time datetime="<%- produs.dataLansare.toISOString().split('T')[0] %>"><%- produs.dataLansare.toISOString().split('T')[0] %></time></p>
-                  </li>
-                  <li>
-                    <p><span class="lista-detalii-produs">Fragil: </span><% if (produs.fragil) { %> Da <% } else { %> Nu <% } %></p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <p><span class="lista-detalii-produs">Categorie: </span><%- produs.categorie %></p>
-                <p><span class="lista-detalii-produs">Subcategorie: </span><%- produs.subcategorie %></p>
-                <p><span class="lista-detalii-produs">Descriere: </span><%- produs.descriere %></p>
-              </div>
+          </select>
+        </div>
+        <div class="col-sm" id="butoane">
+          <div class="row w-100">
+            <div class="col-sm d-flex justify-content-center">
+              <btn class="btn btn-primary" id="filtreaza">Filtreaza</btn>
             </div>
-
-          </article>
+            <div class="col-sm d-flex justify-content-center">
+              <btn class="btn btn-primary" id="reseteaza">Reseteaza</btn>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+              <btn class="btn btn-secondary" id="calculeaza">Calculeaza pretul mediu</btn>
+            </div>
+          </div>
         </div>
 
-        <% if (c % 3 == 0) { %>
       </div>
-      <% } %>
 
-      <% } %>
-    </div>
+      <div class="container-fluid">
+        <% if (locals.produse.length == 0) { %>
+        <p>Nu exista produse care sa corespunda criteriilor de cautare.</p>
+        <% } c=0; for (let produs of locals.produse) { %>
+
+        <% if (c % 3 == 0) { %>
+        <div class="row produse-row">
+          <% } c++;%>
+
+          <div class="col-sm-4">
+            <article class="produs" id="artc-<%- produs.id %>">
+              <h3><a href="/produse/<%- produs.id %>"><%- produs.nume %></a></h3>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <img src="<%- produs.poza %>" alt="<%- produs.nume %>">
+
+                  <ul class="detalii-produs">
+                    <li>
+                      <p><span class="lista-detalii-produs">Pret: </span><%- produs.pret %></p>
+                    </li>
+                    <li>
+                      <p><span class="lista-detalii-produs">Dimensiuni: </span><%- produs.dimensiuni %></p>
+                    </li>
+                    <li>
+                      <p><span class="lista-detalii-produs">Accesorii: </span><%- produs.accesorii %></p>
+                    </li>
+                    <li>
+                      <p><span class="lista-detalii-produs">Data lansarii: </span><time datetime="<%- produs.dataLansare.toISOString().split('T')[0] %>"><%- produs.dataLansare.toISOString().split('T')[0] %></time></p>
+                    </li>
+                    <li>
+                      <p><span class="lista-detalii-produs">Fragil: </span><% if (produs.fragil) { %> Da <% } else { %> Nu <% } %></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <p><span class="lista-detalii-produs">Categorie: </span><%- produs.categorie %></p>
+                  <p><span class="lista-detalii-produs">Subcategorie: </span><%- produs.subcategorie %></p>
+                  <p><span class="lista-detalii-produs">Descriere: </span><%- produs.descriere %></p>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <% if (c % 3 == 0) { %>
+        </div>
+        <% } %>
+
+        <% } %>
+      </div>
 
   </main>
 

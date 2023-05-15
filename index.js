@@ -90,6 +90,7 @@ app.get("/galerie", (req, res) => {
 
 app.get("/produse", async (req, res) => {
   let produse = [];
+  let subcategorii = new Set();
 
   if (req.query.categ) {
     let categ = req.query.categ;
@@ -102,9 +103,15 @@ app.get("/produse", async (req, res) => {
     produse = rez.rows;
   }
 
+  produse.forEach((produs) => {
+    produs.poza = "/resurse/imagini/produse" + produs.poza;
+    subcategorii.add(produs.subcategorie);
+  });
+
   res.render("pagini/produse", {
     categorii: obGlobal.categorii,
     produse: produse,
+    subcategorii: subcategorii,
   });
 });
 

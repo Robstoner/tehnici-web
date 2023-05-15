@@ -40,31 +40,33 @@
     </li>
   </ul>
 
-  <input type="checkbox" id="darkmode-toggle" />
-  <label id="darkmode-label" for="darkmode-toggle">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="darkmode-switch" />
+    <label class="form-check-label" id="darkmode-label" for="darkmode-switch">
+  </div>
 
-    <script>
-      var theme = localStorage.getItem('data-theme');
-      if (theme == 'light') {
-        document.getElementById('darkmode-toggle').checked = false;
-        document.documentElement.setAttribute('data-theme', 'light');
-      } else if (theme == 'dark') {
-        document.getElementById('darkmode-toggle').checked = true;
+  <script>
+    var theme = localStorage.getItem('data-theme');
+    if (theme == 'light') {
+      document.getElementById('darkmode-switch').checked = false;
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (theme == 'dark') {
+      document.getElementById('darkmode-switch').checked = true;
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    document.getElementById('darkmode-switch').addEventListener('change', function() {
+      if (this.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('data-theme', 'light');
       }
+    });
+  </script>
 
-      document.getElementById('darkmode-toggle').addEventListener('change', function() {
-        if (this.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('data-theme', 'light');
-        }
-      });
-    </script>
-
-    <!-- <button id="dark-switch" onclick="darkMode()"><i class="fas fa-regular fa-moon"></i></button>
+  <!-- <button id="dark-switch" onclick="darkMode()"><i class="fas fa-regular fa-moon"></i></button>
 
   <script>
     function darkMode() {
