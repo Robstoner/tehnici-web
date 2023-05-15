@@ -1,0 +1,9 @@
+tot din cerinte normale
+- floating label
+- chestii cu input range
+
+onchange la toate - 0.4
+
+chestii luate direct din db pentru populare - 7 x 0.1
+
+teme multiple - 0.15

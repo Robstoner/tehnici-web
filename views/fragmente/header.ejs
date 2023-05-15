@@ -40,10 +40,12 @@
     </li>
   </ul>
 
-  <div class="form-check form-switch">
+  <div class="form-check form-switch theme">
     <input class="form-check-input" type="checkbox" role="switch" id="darkmode-switch" />
     <label class="form-check-label" id="darkmode-label" for="darkmode-switch">
+      <input type="checkbox" id="green-theme">
   </div>
+
 
   <script>
     var theme = localStorage.getItem('data-theme');
@@ -53,8 +55,20 @@
     } else if (theme == 'dark') {
       document.getElementById('darkmode-switch').checked = true;
       document.documentElement.setAttribute('data-theme', 'dark');
+    } else if (theme == 'green') {
+      document.getElementById('green-theme').checked = true;
+      document.documentElement.setAttribute('data-theme', 'green');
     }
 
+    document.getElementById('green-theme').addEventListener('change', function() {
+      if (this.checked) {
+        document.documentElement.setAttribute('data-theme', 'green');
+        localStorage.setItem('data-theme', 'green');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('data-theme', 'light');
+      }
+    });
     document.getElementById('darkmode-switch').addEventListener('change', function() {
       if (this.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');

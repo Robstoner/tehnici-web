@@ -9,14 +9,17 @@
 $bg-color-light: rgb(252, 252, 252);
 $text-color-light: rgb(0, 0, 0);
 
-$bg-color-dark: rgb(15, 15, 15);
+$bg-color-dark: rgb(32, 32, 32);
 $text-color-dark: rgb(255, 255, 255);
+
+$bg-color-green: rgb(2, 58, 2);
+$text-color-green: rgb(0, 0, 0);
 
 $primary-color: rgb(88, 33, 255);
 $secondary-color: rgb(215, 215, 215);
 $accent-color: rgb(0, 209, 237);
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
 
 :root {
   --background-color: #{$bg-color-light};
@@ -29,20 +32,28 @@ $accent-color: rgb(0, 209, 237);
   --section-margin: 0.5em;
   --section-padding: 0.5em;
   --padding-intern: 0.25em;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-:root[data-theme="light"] {
-  --background-color: #{$bg-color-light};
-  --text-color: #{$text-color-light};
+:root[data-theme='light'] {
+  --background-color: #{$bg-color-light} !important;
+  --text-color: #{$text-color-light} !important;
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
   --accent-color: #{$accent-color};
 }
 
-:root[data-theme="dark"] {
-  --background-color: #{$bg-color-dark};
-  --text-color: #{$text-color-dark};
+:root[data-theme='dark'] {
+  --background-color: #{$bg-color-dark} !important;
+  --text-color: #{$text-color-dark} !important;
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+}
+
+:root[data-theme='green'] {
+  --background-color: #{$bg-color-green} !important;
+  --text-color: #{$text-color-green} !important;
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
   --accent-color: #{$accent-color};

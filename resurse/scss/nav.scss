@@ -1,6 +1,6 @@
-@import "globals";
+@import 'globals';
 
-@import "custom-bs";
+@import 'custom-bs';
 #hamburger,
 #ch-menu {
   display: none;
@@ -27,12 +27,11 @@ nav {
   display: flex;
   background: #ebebeb;
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
 
   &:after {
-    content: "";
+    content: '';
     width: 1em;
     height: 1em;
     position: absolute;
@@ -65,6 +64,12 @@ nav {
   label:after {
     transition: 0.3s;
   }
+}
+
+#green-theme {
+  position: absolute;
+  top: 30%;
+  left: -50%;
 }
 
 ul.meniu {
