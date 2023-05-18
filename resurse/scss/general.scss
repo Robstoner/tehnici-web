@@ -3,7 +3,7 @@ html {
   transition: font-size 0.5s linear;
 }
 
-@import "globals";
+@import 'globals';
 
 body {
   background-color: var(--background-color) !important;
@@ -30,16 +30,11 @@ footer {
 }
 
 #hr-footer {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--accent-color) 50%,
-    transparent
-  );
+  background: linear-gradient(to bottom, transparent, var(--accent-color) 50%, transparent);
   border: none;
 
   &:after {
-    content: "";
+    content: '';
     display: inline-block;
     position: relative;
     width: 1em;

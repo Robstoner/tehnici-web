@@ -1,4 +1,4 @@
-@import "globals";
+@import 'globals';
 
 .grid {
   display: block;
@@ -31,7 +31,7 @@ h1 {
   height: 2cm;
   width: 100px;
   border: 2px double var(--accent-color);
-  content: "Schmidt Robert Eduard";
+  content: 'Schmidt Robert Eduard';
 }
 
 div.container-iframe,

@@ -1,12 +1,7 @@
-@import "globals";
+@import 'globals';
 
 main a:hover {
-  background: radial-gradient(
-    var(--secondary-color) 0%,
-    var(--secondary-color) 40%,
-    transparent 80%,
-    transparent 100%
-  );
+  background: radial-gradient(var(--secondary-color) 0%, var(--secondary-color) 40%, transparent 80%, transparent 100%);
 }
 
 div.container-iframe {
@@ -52,15 +47,15 @@ div.taburi-iframe {
 .grid {
   display: grid;
   padding-top: var(--section-padding);
-  grid-template-columns: "1fr, 1fr, 1fr, 1fr";
+  grid-template-columns: '1fr, 1fr, 1fr, 1fr';
   gap: var(--section-margin);
   grid-template-areas:
-    "z-acasa z-acasa z-acasa z-acasa"
-    "z-acasa z-acasa z-acasa z-acasa"
-    "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site"
-    "z-calendar z-calendar z-best-sellers z-best-sellers"
-    "z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers"
-    "z-detalii z-detalii z-detalii z-detalii";
+    'z-acasa z-acasa z-acasa z-acasa'
+    'z-acasa z-acasa z-acasa z-acasa'
+    'z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site'
+    'z-calendar z-calendar z-best-sellers z-best-sellers'
+    'z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers'
+    'z-detalii z-detalii z-detalii z-detalii';
 }
 
 #acasa {
@@ -168,15 +163,15 @@ th {
 @media screen and (max-width: 1000px) {
   .grid {
     display: grid;
-    grid-template-columns: repeat("1fr", 3);
+    grid-template-columns: repeat('1fr', 3);
     gap: var(--section-margin);
     grid-template-areas:
-      "z-acasa z-acasa z-acasa"
-      "z-acasa z-acasa z-acasa"
-      "z-utilizatori-online z-utilizatori-stats z-date-site"
-      "z-calendar z-best-sellers z-best-sellers"
-      "z-galerie-statica z-best-sellers z-best-sellers"
-      "z-detalii z-detalii z-detalii";
+      'z-acasa z-acasa z-acasa'
+      'z-acasa z-acasa z-acasa'
+      'z-utilizatori-online z-utilizatori-stats z-date-site'
+      'z-calendar z-best-sellers z-best-sellers'
+      'z-galerie-statica z-best-sellers z-best-sellers'
+      'z-detalii z-detalii z-detalii';
   }
 }
 
