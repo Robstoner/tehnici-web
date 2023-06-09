@@ -22,3 +22,7 @@ teme multiple - 0.15
 onchange la toate - 0.4
 
 tranformat diacritice in litere normale - 0.15
+
+--etapa 7
+
+image carousel -- first page

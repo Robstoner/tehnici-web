@@ -22,6 +22,7 @@ obGlobal = {
   folderBackup: path.join(__dirname, 'backup'),
   folderScss: path.join(__dirname, 'resurse/scss'),
   folderCss: path.join(__dirname, 'resurse/css'),
+  folderPozeProduse: path.join(__dirname, 'resurse/imagini/produse'),
 }
 
 app = express()
@@ -56,11 +57,18 @@ app.get('/favicon.ico', (req, res) => {
   res.sendFile('favicon.ico', { root: __dirname + '/resurse/ico' })
 })
 
-app.get(['/', '/index', '/home'], (req, res) => {
+app.get(['/', '/index', '/home'], async (req, res) => {
+  rez = await client.query('select * from produse')
+  produse = rez.rows
+  produse.forEach((produs) => {
+    produs.poza = path.join('/resurse/imagini/produse', produs.poza)
+  })
+
   res.render('pagini/index', {
     ip: req.ip,
     imagini: obGlobal.obImagini.imagini,
     categorii: obGlobal.categorii,
+    produse: produse,
   })
 })
 
