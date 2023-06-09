@@ -3,7 +3,7 @@ html {
   transition: font-size 0.5s linear;
 }
 
-@import "globals";
+@import 'globals';
 
 body {
   background-color: var(--background-color) !important;
@@ -11,6 +11,16 @@ body {
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
   min-width: 450px;
+}
+
+header {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  text-align: center;
+  h1 {
+    font-size: 2em;
+    margin: 0;
+  }
 }
 
 footer {
@@ -30,16 +40,11 @@ footer {
 }
 
 #hr-footer {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--accent-color) 50%,
-    transparent
-  );
+  background: linear-gradient(to bottom, transparent, var(--accent-color) 50%, transparent);
   border: none;
 
   &:after {
-    content: "";
+    content: '';
     display: inline-block;
     position: relative;
     width: 1em;

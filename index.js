@@ -282,14 +282,24 @@ function compileazaScss(caleScss, caleCss) {
     fs.mkdirSync(caleBackup, { recursive: true })
   }
 
-  let numeFisCss = path.basename(caleCss)
+  let numeFisCss = path.basename(caleCss).split('.')[0]
   if (fs.existsSync(caleCss)) {
-    fs.copyFileSync(caleCss, path.join(caleBackup, numeFisCss))
+    fs.copyFileSync(caleCss, path.join(caleBackup, numeFisCss + '_' + new Date().getTime() + '.css'))
   }
 
   rez = sass.compile(caleScss, { sourceMap: true })
   fs.writeFileSync(caleCss, rez.css)
 }
+
+function compileazaToateScss() {
+  let vScss = fs.readdirSync(obGlobal.folderScss)
+  vScss.forEach((numeFis) => {
+    let caleScss = path.join(obGlobal.folderScss, numeFis)
+    compileazaScss(caleScss)
+  })
+}
+
+compileazaToateScss()
 
 fs.watch(obGlobal.folderScss, (eveniment, fisier) => {
   if (eveniment == 'change' || eveniment == 'rename') {

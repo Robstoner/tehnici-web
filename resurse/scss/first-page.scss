@@ -1,12 +1,7 @@
-@import "globals";
+@import 'globals';
 
 main a:hover {
-  background: radial-gradient(
-    var(--secondary-color) 0%,
-    var(--secondary-color) 40%,
-    transparent 80%,
-    transparent 100%
-  );
+  background: radial-gradient(var(--secondary-color) 0%, var(--secondary-color) 40%, transparent 80%, transparent 100%);
 }
 
 div.container-iframe {
@@ -52,15 +47,24 @@ div.taburi-iframe {
 .grid {
   display: grid;
   padding-top: var(--section-padding);
-  grid-template-columns: "1fr, 1fr, 1fr, 1fr";
+  grid-template-columns: '1fr, 1fr, 1fr, 1fr';
   gap: var(--section-margin);
   grid-template-areas:
-    "z-acasa z-acasa z-acasa z-acasa"
-    "z-acasa z-acasa z-acasa z-acasa"
-    "z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site"
-    "z-calendar z-calendar z-best-sellers z-best-sellers"
-    "z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers"
-    "z-detalii z-detalii z-detalii z-detalii";
+    'scrolling-text scrolling-text scrolling-text scrolling-text'
+    'z-acasa z-acasa z-acasa z-acasa'
+    'z-acasa z-acasa z-acasa z-acasa'
+    'z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site'
+    'z-calendar z-calendar z-best-sellers z-best-sellers'
+    'z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers'
+    'z-detalii z-detalii z-detalii z-detalii';
+}
+
+#scrolling-text {
+  color: var(--primary-color);
+  grid-area: scrolling-text;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--accent-color);
 }
 
 #acasa {
@@ -101,64 +105,61 @@ div.taburi-iframe {
   text-align: center;
 }
 
-#tabel-produse caption {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 0.5em;
-  color: var(--text-color);
-}
-
 #tabel-produse {
   border: 1px solid var(--accent-color);
   border-radius: 5px;
   border-collapse: separate;
-  overflow-x: scroll;
-}
+  overflow-x: visible;
 
-#tabel-produse td,
-th {
-  border-left: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
-  margin: 5px;
-  padding: 5px;
-}
-
-#tabel-produse th {
-  background-color: var(--accent-color);
-  border-top: none;
-}
-
-#tabel-produse td:first-child,
-#tabel-produse th:first-child {
-  border-left: none;
-}
-
-#tabel-produse tr:nth-child(even) {
-  background-color: var(--background-color);
-}
-
-#tabel-produse tr:nth-child(odd) {
-  background-color: var(--background-color);
-}
-
-#tabel-produse tr:hover {
-  background-color: var(--primary-color);
-  transition: background-color 0.5s linear;
-
-  a {
-    color: var(--background-color);
-    transition: color 0.5s linear;
+  caption {
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5em;
+    color: var(--text-color);
   }
-}
 
-#tabel-produse td:hover {
-  background-color: var(--accent-color);
-  transition: background-color 0.5s linear;
-}
+  td,
+  th {
+    border-left: 1px solid var(--accent-color);
+    border-top: 1px solid var(--accent-color);
+    margin: 5px;
+    padding: 5px;
+  }
 
-#tabel-produse tfoot {
-  font-weight: bold;
-  font-style: italic;
+  th {
+    background-color: var(--accent-color);
+    border-top: none;
+  }
+
+  tfoot {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--background-color);
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--background-color);
+  }
+
+  tr:hover {
+    background-color: var(--primary-color);
+    transition: background-color 0.5s linear;
+
+    a {
+      color: var(--background-color);
+      transition: color 0.5s linear;
+    }
+  }
+
+  td:hover {
+    background-color: var(--accent-color);
+    transition: background-color 0.5s linear;
+  }
 }
 
 #watermark {
@@ -168,15 +169,15 @@ th {
 @media screen and (max-width: 1000px) {
   .grid {
     display: grid;
-    grid-template-columns: repeat("1fr", 3);
+    grid-template-columns: repeat('1fr', 3);
     gap: var(--section-margin);
     grid-template-areas:
-      "z-acasa z-acasa z-acasa"
-      "z-acasa z-acasa z-acasa"
-      "z-utilizatori-online z-utilizatori-stats z-date-site"
-      "z-calendar z-best-sellers z-best-sellers"
-      "z-galerie-statica z-best-sellers z-best-sellers"
-      "z-detalii z-detalii z-detalii";
+      'z-acasa z-acasa z-acasa'
+      'z-acasa z-acasa z-acasa'
+      'z-utilizatori-online z-utilizatori-stats z-date-site'
+      'z-calendar z-best-sellers z-best-sellers'
+      'z-galerie-statica z-best-sellers z-best-sellers'
+      'z-detalii z-detalii z-detalii';
   }
 }
 
@@ -188,5 +189,74 @@ th {
 
   .grid > * {
     margin-bottom: 15px;
+  }
+
+  #tabel-produse {
+    border: none;
+    padding: 0;
+    margin: 1em;
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tfoot {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid var(--secondary-color);
+    }
+
+    tbody {
+      display: block;
+
+      td:nth-child(1):before {
+        content: 'Nume produs: ';
+      }
+
+      td:nth-child(2):before {
+        content: 'Pret: ';
+      }
+
+      td:nth-child(3):before {
+        content: 'Link produs: ';
+      }
+
+      td:nth-child(4):before {
+        content: 'Data lansarii: ';
+      }
+
+      td:last-child {
+        border-bottom: 1px dashed var(--accent-color);
+      }
+      tr:first-child td:first-child {
+        border-top: 1px solid var(--secondary-color);
+      }
+      tr:last-child td:last-child {
+        border-bottom: 1px solid var(--secondary-color);
+      }
+    }
+
+    td {
+      margin: 0;
+      border: none;
+      border-right: 1px solid var(--secondary-color);
+      border-left: 1px solid var(--secondary-color);
+      display: block;
+      padding: 0.5em;
+      box-sizing: border-box;
+    }
+
+    td:before {
+      float: left;
+      font-weight: bold;
+      width: 35%;
+    }
+
+    tr {
+      margin: 0;
+      display: block;
+      width: 100%;
+    }
   }
 }
