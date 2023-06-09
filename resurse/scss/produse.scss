@@ -113,6 +113,8 @@
 
 .form-range {
   padding-right: 0;
+  $form-range-track-bg: var(--accent-color) !important;
+  $form-range-thumb-bg: var(--accent-color) !important;
 }
 
 #inpAccesorii {

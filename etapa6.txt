@@ -1,9 +1,13 @@
+punctaj total
+0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 = 6.96 - fara etapa 7
+0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 + 2.2 = 9.16 - cu etapa 7
+
 --etapa 5 
 
 timestamp css backup
 
-tabel responsive -- first page
-text care se plimba orizontal
+tabel responsive -- first page - 0.05
+text care se plimba orizontal - 0.05
 
 --etapa 6
 
@@ -11,8 +15,10 @@ tot din cerinte normale
 - floating label
 - chestii cu input range
 
-onchange la toate - 0.4
-
 chestii luate direct din db pentru populare - 7 x 0.1
 
 teme multiple - 0.15
+
+onchange la toate - 0.4
+
+tranformat diacritice in litere normale - 0.15

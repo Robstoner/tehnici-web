@@ -21,7 +21,9 @@ window.onload = function () {
     let produse = document.getElementsByClassName('produs')
 
     let inpNume = document.getElementById('inpNume').value
+    inpNume = inpNume ? inpNume.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : ''
     let inpCheie = document.getElementById('inpCheie').value
+    inpCheie = inpCheie ? inpCheie.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : ''
     let inpPret = document.getElementById('inpPret').value
     let inpSubcategorie = document.getElementById('inpSubcategorie').value
     let inpNoutati = document.getElementById('inpNoutati').checked
