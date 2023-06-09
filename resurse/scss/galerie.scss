@@ -1,4 +1,4 @@
-@import "globals";
+@import 'globals';
 
 #galerie-statica {
   padding-left: var(--padding-intern);
@@ -11,11 +11,11 @@
   grid-row-gap: 0.5em;
   grid-column-gap: 0.5em;
   grid-template-areas:
-    "img img img"
-    "img . img"
-    "img . img"
-    "img . img"
-    "img img img";
+    'img img img'
+    'img . img'
+    'img . img'
+    'img . img'
+    'img img img';
   counter-reset: nrimag 0; /* nrimag=3 */
 
   img {
@@ -37,7 +37,7 @@
   }
 
   figcaption::before {
-    content: counter(nrimag, upper-roman) ")";
+    content: counter(nrimag, upper-roman) ')';
   }
 }
 
