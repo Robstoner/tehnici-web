@@ -76,7 +76,7 @@
         </div>
         <div class="col-md-4 m-1">
           <div class="form-floating">
-            <select id="inpAccesorii" class="form-select" name="accesorii" multiple>
+            <select id="inpAccesorii" class="form-select w-auto" name="accesorii" multiple>
               <% for (let accesoriu of locals.accesorii) { %>
               <option value="<%- accesoriu %>"><%- accesoriu %></option>
               <% } %>
@@ -92,9 +92,9 @@
             <div class="input-group mx-auto w-80">
               <legend>Pret</legend>
 
-              <span class="input-group-text"><%- locals.min %></span>
-              <input type="number" class="form-control" min="<%- locals.min %>" max="<%- locals.max %>" value="0" id="valoare-pret">
-              <span class="input-group-text"><%- locals.max %></span>
+              <span class="input-group-text rounded-start-3"><%- locals.min %></span>
+              <input type="number" class="form-control border-accent" min="<%- locals.min %>" max="<%- locals.max %>" value="0" id="valoare-pret">
+              <span class="input-group-text rounded-end-3"><%- locals.max %></span>
 
               <input type="range" class="form-range" id="inpPret" name="pret" min="<%- locals.min %>" max="<%- locals.max %>" value="0" step="1">
             </div>
