@@ -1,138 +1,39 @@
 @import 'globals';
 
-.produs {
-  display: flex;
-  flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  margin: 1em;
-  padding: 1em;
-  border: 1px solid var(--accent-color);
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
+// .produs {
+//   display: flex;
+//   flex-direction: column;
+//   //   justify-content: center;
+//   //   align-items: center;
+//   margin: 1em;
+//   padding: 1em;
+//   border: 1px solid var(--accent-color);
+//   border-radius: 5px;
+//   width: 100%;
+//   height: 100%;
+//   background-color: var(--background-color);
 
-  h3 {
-    text-align: start;
-    color: var(--primary-color);
-  }
+//   h3 {
+//     text-align: start;
+//     color: var(--primary-color);
+//   }
 
-  ul {
-    padding-left: 0;
-  }
-}
+//   ul {
+//     padding-left: 0;
+//   }
+// }
 
-.produse-row {
-  margin-bottom: 2em;
-}
-
-.adv-search {
-  padding-top: 0.5em;
-  z-index: 1;
-}
-
-#search-label {
-  color: var(--primary-color);
-  margin-right: 1em;
-  margin-left: 1em;
-}
-
-#search-switch {
-  margin-right: 1em;
-  margin-left: 1em;
+.poza-produs {
+  max-width: 300px;
+  max-height: 300px;
 }
 
 #search-produse {
   display: none;
-
-  input {
-    width: 100%;
-    height: 2em;
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em;
-  }
-  label {
-    color: var(--primary-color);
-    width: 100%;
-    padding-left: 1em;
-    // margin-top: 1em;
-  }
-  select {
-    width: 100%;
-    height: 2em;
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    padding: 0.4em;
-    margin: 0.5em;
-  }
-}
-
-#radio-fieldset {
-  input {
-    height: 100%;
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
-
-  label {
-    color: var(--primary-color);
-    width: auto;
-    margin: 0;
-  }
-}
-
-.input-group {
-  width: 95% !important;
-}
-
-#buton-inpNoutati {
-  margin-left: 1em !important;
-  margin-bottom: 1em !important;
 }
 
 #inpNoutati {
   display: none;
-}
-
-#inpPret {
-  width: 60% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  border-radius: 0 !important;
-}
-
-.input-group-text {
-  height: 2em !important;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
-}
-
-.form-range {
-  padding-right: 0;
-  $form-range-track-bg: var(--accent-color) !important;
-  $form-range-thumb-bg: var(--accent-color) !important;
-}
-
-#inpAccesorii {
-  width: 100% !important;
-  height: 5em !important;
-}
-
-#butoane {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-
-  button {
-    height: 3.5em !important;
-  }
 }
 
 .icon-butoane {
@@ -155,14 +56,6 @@
   padding: 0.5em;
 }
 
-// .detalii-produs {
-// }
-
-.lista-detalii-produs {
-  text-decoration: bold;
-  color: var(--accent-color);
-}
-
 @media screen and (max-width: 700px) {
   .icon-butoane {
     display: block;
@@ -170,5 +63,9 @@
 
   .text-butoane {
     display: none;
+  }
+
+  #buton-inpNoutati {
+    width: 100%;
   }
 }

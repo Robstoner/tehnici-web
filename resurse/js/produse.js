@@ -11,19 +11,39 @@ window.onload = function () {
 
   document.getElementById('inpPret').onchange = function () {
     document.getElementById('valoare-pret').value = this.value
+    console.log('da')
   }
 
   document.getElementById('valoare-pret').onchange = function () {
     document.getElementById('inpPret').value = this.value
+    console.log('da')
+  }
+
+  function resetErrors() {
+    // document.getElementById('eroarePlaceholder').innerHTML = ''
+    document.getElementById('inpCheie').classList.remove('is-invalid')
+    document.getElementById('inpNume').classList.remove('is-invalid')
   }
 
   function filtreaza() {
+    resetErrors()
+
     let produse = document.getElementsByClassName('produs')
 
     let inpNume = document.getElementById('inpNume').value
     inpNume = inpNume ? inpNume.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : ''
     let inpCheie = document.getElementById('inpCheie').value
     inpCheie = inpCheie ? inpCheie.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : ''
+
+    if (inpNume.search(/,|;|\.|\||!|@|'|`|:|[0-9]/gim) != -1) {
+      document.getElementById('inpNume').classList.add('is-invalid')
+      return
+    }
+    if (inpCheie.search(/,|;|\.|\||!|@|'|`|:|[0-9]/gim) != -1) {
+      document.getElementById('inpCheie').classList.add('is-invalid')
+      return
+    }
+
     let inpPret = document.getElementById('inpPret').value
     let inpSubcategorie = document.getElementById('inpSubcategorie').value
     let inpNoutati = document.getElementById('inpNoutati').checked
@@ -31,6 +51,7 @@ window.onload = function () {
     let inpAccesorii = Array.from(Accesorii).map((opt) => opt.value)
     let inpCuloare = document.querySelector('input[name="culoare"]:checked').value
 
+    let nr = 0
     for (let produs of produse) {
       let ok = 1
       produs.style.display = 'none'
@@ -53,8 +74,13 @@ window.onload = function () {
       if (inpAccesorii.length > 0)
         for (let j = 0; j < inpAccesorii.length; j++) if (!accesoriiList.includes(inpAccesorii[j])) ok = 0
 
-      if (ok) produs.style.display = 'block'
+      if (ok) {
+        produs.style.display = 'block'
+        nr++
+      }
     }
+
+    // if (!nr) document.getElementById('eroareElemente').style.display = 'block'
   }
 
   document.getElementById('filtreaza').onclick = function () {

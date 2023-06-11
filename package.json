@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Robstoner/tehnici-web#readme",
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",

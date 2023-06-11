@@ -16,6 +16,8 @@ nav {
   margin-left: calc(-1 * var(--page-padding));
   position: sticky;
   top: 0;
+
+  z-index: 1000;
 }
 
 #darkmode-label {
@@ -76,6 +78,7 @@ ul.meniu {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: 0;
 
   ul.submeniu {
     opacity: 0;

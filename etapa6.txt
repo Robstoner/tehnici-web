@@ -4,16 +4,15 @@ punctaj total
 
 --etapa 5 
 
-timestamp css backup
+galerie animata - 0.5
+timestamp css backup - 0.05  -- de facut frumos
 
 tabel responsive -- first page - 0.05
 text care se plimba orizontal - 0.05
 
 --etapa 6
 
-tot din cerinte normale
-- floating label
-- chestii cu input range
+tot din cerinte normale - 1.5
 
 chestii luate direct din db pentru populare - 7 x 0.1
 

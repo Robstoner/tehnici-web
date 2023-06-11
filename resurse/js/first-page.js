@@ -14,5 +14,5 @@ window.onload = function () {
       nr++
       if (nr == carouselItems.length) nr = 0
     }
-  }, 5000)
+  }, 15000)
 }
