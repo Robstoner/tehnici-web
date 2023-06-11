@@ -95,6 +95,7 @@ img {
 #err-imag img {
   width: 100%;
 }
+
 #err-coloane {
   display: flex;
   padding-top: 1em;
@@ -105,8 +106,43 @@ img {
   font-size: 2em;
   padding-left: 1em;
 }
+
 #err-coloane h2 {
   font-size: 2em;
+}
+
+#banner-cookies {
+  position: fixed;
+  bottom: 2.5%;
+  left: 2.5%;
+  width: 20%;
+  height: 20%;
+  background-color: var(--accent-color);
+  opacity: 0.75;
+
+  animation-name: banner-cookies;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+#mesaj-cookies {
+  opacity: 1;
+}
+
+#ok-cookies {
+  opacity: 1;
+}
+
+@keyframes banner-cookies {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 0.75;
+    scale: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {

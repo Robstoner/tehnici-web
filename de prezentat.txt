@@ -25,3 +25,4 @@ tranformat diacritice in litere normale - 0.15
 --etapa 7
 
 image carousel -- first page
+banner cookies
