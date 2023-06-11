@@ -20,7 +20,7 @@ window.onload = function () {
   }
 
   function resetErrors() {
-    // document.getElementById('eroarePlaceholder').innerHTML = ''
+    document.getElementById('eroareMain').innerHTML = ''
     document.getElementById('inpCheie').classList.remove('is-invalid')
     document.getElementById('inpNume').classList.remove('is-invalid')
   }
@@ -80,7 +80,9 @@ window.onload = function () {
       }
     }
 
-    // if (!nr) document.getElementById('eroareElemente').style.display = 'block'
+    if (!nr)
+      document.getElementById('eroareMain').innerHTML =
+        '<div class="alert alert-danger m-3 w-25">Nu s-au gasit produse</div>'
   }
 
   document.getElementById('filtreaza').onclick = function () {
@@ -162,6 +164,10 @@ window.onload = function () {
 
   document.getElementById('sorteazaCresc').onclick = function () {
     let produse = document.getElementsByClassName('produs')
+    for (let prod of produse) {
+      let classes = prod.className.split(' ').filter((c) => c.startsWith('order-'))
+      if (classes.length) prod.classList.remove(classes[0])
+    }
 
     let produseList = Array.from(produse)
     produseList.sort((a, b) => {
@@ -175,13 +181,17 @@ window.onload = function () {
       else return numeA.localeCompare(numeB)
     })
 
-    for (let prod of produseList) {
-      prod.parentElement.appendChild(prod)
+    for (let i = 0; i < produseList.length; i++) {
+      produseList[i].classList.add('order-' + i)
     }
   }
 
   document.getElementById('sorteazaDescresc').onclick = function () {
     let produse = document.getElementsByClassName('produs')
+    for (let prod of produse) {
+      let classes = prod.className.split(' ').filter((c) => c.startsWith('order-'))
+      if (classes.length) prod.classList.remove(classes[0])
+    }
 
     let produseList = Array.from(produse)
     produseList.sort((a, b) => {
@@ -195,8 +205,8 @@ window.onload = function () {
       else return numeB.localeCompare(numeA)
     })
 
-    for (let prod of produseList) {
-      prod.parentElement.appendChild(prod)
+    for (let i = 0; i < produseList.length; i++) {
+      produseList[i].classList.add('order-' + i)
     }
   }
 }

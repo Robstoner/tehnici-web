@@ -307,7 +307,7 @@ function compileazaToateScss() {
   })
 }
 
-compileazaToateScss()
+// compileazaToateScss()
 
 fs.watch(obGlobal.folderScss, (eveniment, fisier) => {
   if (eveniment == 'change' || eveniment == 'rename') {
