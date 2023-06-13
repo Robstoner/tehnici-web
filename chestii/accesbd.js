@@ -97,13 +97,10 @@ class AccesBD {
   select({ tabel = '', campuri = [], conditiiAnd = [] } = {}, callback, parametriQuery = []) {
     let conditieWhere = ''
     if (conditiiAnd.length > 0) conditieWhere = `where ${conditiiAnd.join(' and ')}`
+
     let comanda = `select ${campuri.join(',')} from ${tabel} ${conditieWhere}`
     console.error(comanda)
-    /*
-        comanda=`select id, camp1, camp2 from tabel where camp1=$1 and camp2=$2;
-        this.client.query(comanda,[val1, val2],callback)
 
-        */
     this.client.query(comanda, parametriQuery, callback)
   }
   async selectAsync({ tabel = '', campuri = [], conditiiAnd = [] } = {}) {
@@ -112,6 +109,7 @@ class AccesBD {
 
     let comanda = `select ${campuri.join(',')} from ${tabel} ${conditieWhere}`
     console.error('selectAsync:', comanda)
+
     try {
       let rez = await this.client.query(comanda)
       console.log('selectasync: ', rez)
@@ -122,19 +120,14 @@ class AccesBD {
     }
   }
   insert({ tabel = '', campuri = {} } = {}, callback) {
-    /*
-        campuri={
-            nume:"savarina",
-            pret: 10,
-            calorii:500
-        }
-        */
     console.log('-------------------------------------------')
     console.log(Object.keys(campuri).join(','))
     console.log(Object.values(campuri).join(','))
+
     let comanda = `insert into ${tabel}(${Object.keys(campuri).join(',')}) values ( ${Object.values(campuri)
       .map((x) => `'${x}'`)
       .join(',')})`
+
     console.log(comanda)
     this.client.query(comanda, callback)
   }
@@ -145,58 +138,41 @@ class AccesBD {
    * @property {string []} campuri - o lista de stringuri cu numele coloanelor afectate de query; poate cuprinde si elementul "*"
    * @property {string[]} conditiiAnd - lista de stringuri cu conditii pentru where
    */
-  // update({tabel="",campuri=[],valori=[], conditiiAnd=[]} = {}, callback, parametriQuery){
-  //     if(campuri.length!=valori.length)
-  //         throw new Error("Numarul de campuri difera de nr de valori")
-  //     let campuriActualizate=[];
-  //     for(let i=0;i<campuri.length;i++)
-  //         campuriActualizate.push(`${campuri[i]}='${valori[i]}'`);
-  //     let conditieWhere="";
-  //     if(conditiiAnd.length>0)
-  //         conditieWhere=`where ${conditiiAnd.join(" and ")}`;
-  //     let comanda=`update ${tabel} set ${campuriActualizate.join(", ")}  ${conditieWhere}`;
-  //     console.log(comanda);
-  //     this.client.query(comanda,callback)
-  // }
 
   update({ tabel = '', campuri = {}, conditiiAnd = [] } = {}, callback, parametriQuery) {
     let campuriActualizate = []
     for (let prop in campuri) campuriActualizate.push(`${prop}='${campuri[prop]}'`)
+
     let conditieWhere = ''
     if (conditiiAnd.length > 0) conditieWhere = `where ${conditiiAnd.join(' and ')}`
+
     let comanda = `update ${tabel} set ${campuriActualizate.join(', ')}  ${conditieWhere}`
+
     console.log(comanda)
     this.client.query(comanda, callback)
   }
 
   updateParametrizat({ tabel = '', campuri = [], valori = [], conditiiAnd = [] } = {}, callback, parametriQuery) {
     if (campuri.length != valori.length) throw new Error('Numarul de campuri difera de nr de valori')
+
     let campuriActualizate = []
     for (let i = 0; i < campuri.length; i++) campuriActualizate.push(`${campuri[i]}=$${i + 1}`)
+
     let conditieWhere = ''
     if (conditiiAnd.length > 0) conditieWhere = `where ${conditiiAnd.join(' and ')}`
+
     let comanda = `update ${tabel} set ${campuriActualizate.join(', ')}  ${conditieWhere}`
+
     console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1111', comanda)
     this.client.query(comanda, valori, callback)
   }
-
-  //TO DO
-  // updateParametrizat({tabel="",campuri={}, conditiiAnd=[]} = {}, callback, parametriQuery){
-  //     let campuriActualizate=[];
-  //     for(let prop in campuri)
-  //         campuriActualizate.push(`${prop}='${campuri[prop]}'`);
-  //     let conditieWhere="";
-  //     if(conditiiAnd.length>0)
-  //         conditieWhere=`where ${conditiiAnd.join(" and ")}`;
-  //     let comanda=`update ${tabel} set ${campuriActualizate.join(", ")}  ${conditieWhere}`;
-  //     this.client.query(comanda,valori, callback)
-  // }
 
   delete({ tabel = '', conditiiAnd = [] } = {}, callback) {
     let conditieWhere = ''
     if (conditiiAnd.length > 0) conditieWhere = `where ${conditiiAnd.join(' and ')}`
 
     let comanda = `delete from ${tabel} ${conditieWhere}`
+
     console.log(comanda)
     this.client.query(comanda, callback)
   }
