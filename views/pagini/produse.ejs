@@ -42,8 +42,8 @@
 
           <datalist id="cuvinte-cheie">
             <% for (let cheie of locals.chei) { %>
-            <option value="<%- cheie %>">
-              <% } %>
+            <option value="<%- cheie %>"><%- cheie %></option>
+            <% } %>
           </datalist>
 
         </div>
