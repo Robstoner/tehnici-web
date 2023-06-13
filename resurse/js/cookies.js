@@ -21,11 +21,11 @@ function deleteCookie(nume) {
 
 window.addEventListener('load', function () {
   if (getCookie('acceptat_banner')) {
-    document.getElementById('banner-cookies').style.display = 'none'
+    document.getElementById('banner-cookies').setAttribute('style', 'display: none !important;')
   }
 
   this.document.getElementById('ok-cookies').onclick = function () {
-    setCookie('acceptat_banner', true, 60000)
-    document.getElementById('banner-cookies').style.display = 'none'
+    setCookie('acceptat_banner', true, 5000)
+    document.getElementById('banner-cookies').setAttribute('style', 'display: none !important;')
   }
 })
