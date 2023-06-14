@@ -6,6 +6,11 @@
  @property {Symbol} cumparareProduse Dreptul de a cumpara
 
  @property {Symbol} vizualizareGrafice Dreptul de a vizualiza graficele de vanzari
+ @property {Symbol} vizualizareGalerie Dreptul de a vizualiza galeria de imagini
+ @property {Symbol} vizualizareFacturi Dreptul de a vizualiza facturile
+ 
+ @property {Symbol} trimitereCerereContact Dreptul de a trimite cererea de contact
+
  */
 
 /**

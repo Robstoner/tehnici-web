@@ -1,6 +1,6 @@
 punctaj total
 0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 = 6.96 - fara etapa 7
-0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 + 2.2 = 9.16 - cu etapa 7
+0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 + 2 = 8.96 - cu etapa 7
 
 --etapa 5 
 
@@ -26,3 +26,5 @@ tranformat diacritice in litere normale - 0.15
 
 image carousel -- first page
 banner cookies
+clase 
+-nu jsdoc
