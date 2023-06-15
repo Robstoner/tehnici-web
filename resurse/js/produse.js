@@ -9,9 +9,8 @@ window.onload = function () {
 
   document.getElementById('valoare-pret').value = document.getElementById('inpPret').value
 
-  document.getElementById('inpPret').onchange = function () {
+  document.getElementById('inpPret').oninput = function () {
     document.getElementById('valoare-pret').value = this.value
-    console.log('da')
   }
 
   document.getElementById('valoare-pret').onchange = function () {
@@ -82,7 +81,7 @@ window.onload = function () {
 
     if (!nr)
       document.getElementById('eroareMain').innerHTML =
-        '<div class="alert alert-danger m-3 w-25">Nu s-au gasit produse</div>'
+        '<div class="alert alert-danger mt-2 w-25 position-absolute">Nu s-au gasit produse</div>'
   }
 
   document.getElementById('filtreaza').onclick = function () {
