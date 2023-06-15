@@ -1,20 +1,23 @@
 punctaj total
-0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 = 6.96 - fara etapa 7
+0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.05 + 0.15) x 1.15 = 6.96 - fara etapa 7
 0.3 + 0.5 x 1.15 + 0.4 x 1.15 + 0.4 + 0.6 x 1.15 + 1.2 + (1.5 + 0.7 + 0.15 + 0.4 + 0.15) x 1.15 + 2 = 8.96 - cu etapa 7
 
 --etapa 5 
 
 galerie animata - 0.5
 timestamp css backup - 0.05  -- de facut frumos
+reflexie fixed 
 
 tabel responsive -- first page - 0.05
 text care se plimba orizontal - 0.05
 
 --etapa 6
 
-tot din cerinte normale - 1.5
+tot din cerinte normale - 1.5 --- 1.35
 
 chestii luate direct din db pentru populare - 7 x 0.1
+
+nu sunt produse - 0.05
 
 teme multiple - 0.15
 
@@ -23,6 +26,8 @@ onchange la toate - 0.4
 tranformat diacritice in litere normale - 0.15
 
 --etapa 7
+
+la carusel sunt 5 statice si se schjimba src + celelalte
 
 image carousel -- first page
 banner cookies
