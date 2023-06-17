@@ -1,13 +1,13 @@
 //setCookie("a",10, 1000)
 function setCookie(nume, val, timpExpirare) {
   //timpExpirare in milisecunde
-  d = new Date()
+  let d = new Date()
   d.setTime(d.getTime() + timpExpirare)
   document.cookie = `${nume}=${val}; expires=${d.toUTCString()}`
 }
 
 function getCookie(nume) {
-  vectorParametri = document.cookie.split(';') // ["a=10","b=ceva"]
+  let vectorParametri = document.cookie.split(';') // ["a=10","b=ceva"]
   for (let param of vectorParametri) {
     if (param.trim().startsWith(nume + '=')) return param.split('=')[1]
   }
@@ -29,3 +29,5 @@ window.addEventListener('load', function () {
     document.getElementById('banner-cookies').setAttribute('style', 'display: none !important;')
   }
 })
+
+export { setCookie, getCookie, deleteCookie }

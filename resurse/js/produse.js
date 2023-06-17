@@ -1,3 +1,5 @@
+import { setCookie } from './cookies.js'
+
 window.onload = function () {
   if (document.getElementById('search-switch').checked)
     document.getElementById('search-produse').style.display = 'block'
@@ -82,6 +84,15 @@ window.onload = function () {
     if (!nr)
       document.getElementById('eroareMain').innerHTML =
         '<div class="alert alert-danger mt-2 w-25 position-absolute">Nu s-au gasit produse</div>'
+  }
+
+  let links = document.getElementsByClassName('nume')
+
+  for (let link of links) {
+    link.onclick = function () {
+      let id = this.getAttribute('id')
+      setCookie('ultimulProdus', id, 86400000)
+    }
   }
 
   document.getElementById('filtreaza').onclick = function () {
