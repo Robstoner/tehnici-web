@@ -33,3 +33,15 @@ image carousel -- first page
 banner cookies
 clase 
 -nu jsdoc
+
+
+
+----------------
+7.122+ 2 + 0.15 x 1.15 = 9.29
+
+carusel fixed - first-page.js
+cookie ultimul produs accesat - produse.js : 93
+
+input nume merge
+pagina produs cu poza si data 
+

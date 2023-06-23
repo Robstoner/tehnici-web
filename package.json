@@ -29,7 +29,7 @@
     "sharp": "^0.32.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21",
+    "nodemon": "^1.14.9",
     "sass": "^1.60.0"
   }
 }

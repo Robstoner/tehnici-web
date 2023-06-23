@@ -167,7 +167,7 @@ app.get('/produse/:id', (req, res) => {
         afisEroare(res, '404')
       } else {
         produs = rez.rows[0]
-        console.log(produs)
+        produs.poza = '/resurse/imagini/produse' + produs.poza
         res.render('pagini/produs', {
           categorii: obGlobal.categorii,
           produs: produs,

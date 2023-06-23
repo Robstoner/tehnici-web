@@ -15,14 +15,29 @@
   <%- include('../fragmente/header') %>
 
   <main>
-    <h2><%-  locals.produs.nume %></h2>
-    <div class="produs">
-      <img src="<%- locals.produs.poza %>" alt="<%- locals.produs.nume %>">
-      <p><%- locals.produs.descriere %></p>
-      <p><%- locals.produs.pret %> lei</p>
-      <p><%- locals.produs.categorie %></p>
-      <p><%- locals.produs.dimensiuni %></p>
-      <button>Adauga in cos</button>
+    <div class="produs container">
+      <h2 class="p-2 text-primary"><%-  locals.produs.nume %></h2>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <p><%- locals.produs.descriere %></p>
+          <p><%- locals.produs.pret %> lei</p>
+          <p><%- locals.produs.categorie %></p>
+          <p><%- locals.produs.subcategorie %></p>
+          <p><%- locals.produs.accesorii %></p>
+          <p><%- locals.produs.dataLansare.toISOString().split('T')[0] %></p>
+          <p><%- locals.produs.dimensiuni %></p>
+          <p><%- locals.produs.culoare %></p>
+          <p><%- locals.produs.fragil ? 'Fragil' : '' %></p>
+
+          <button class="btn btn-outline-primary">Adauga in cos</button>
+
+        </div>
+
+        <div class="col-sm-6 w-25">
+          <img class="img-fluid rounded-2" src="<%- locals.produs.poza %>" alt="<%- locals.produs.nume %>">
+        </div>
+      </div>
     </div>
   </main>
 

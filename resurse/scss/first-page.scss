@@ -54,7 +54,7 @@ div.taburi-iframe {
     'z-acasa z-acasa z-acasa z-acasa'
     'z-acasa z-acasa z-acasa z-acasa'
     'z-utilizatori-online z-utilizatori-stats z-utilizatori-stats z-date-site'
-    'z-calendar z-calendar z-best-sellers z-best-sellers'
+    'z-carusel z-carusel z-best-sellers z-best-sellers'
     'z-galerie-statica z-galerie-statica z-best-sellers z-best-sellers'
     'z-detalii z-detalii z-detalii z-detalii';
 }
@@ -75,8 +75,8 @@ div.taburi-iframe {
   grid-area: z-best-sellers;
 }
 
-#calendar {
-  grid-area: z-calendar;
+#carusel {
+  grid-area: z-carusel;
 }
 
 #galerie-statica {
@@ -175,7 +175,7 @@ div.taburi-iframe {
       'z-acasa z-acasa z-acasa'
       'z-acasa z-acasa z-acasa'
       'z-utilizatori-online z-utilizatori-stats z-date-site'
-      'z-calendar z-best-sellers z-best-sellers'
+      'z-carusel z-best-sellers z-best-sellers'
       'z-galerie-statica z-best-sellers z-best-sellers'
       'z-detalii z-detalii z-detalii';
   }

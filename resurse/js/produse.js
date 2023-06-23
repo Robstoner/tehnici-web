@@ -17,7 +17,6 @@ window.onload = function () {
 
   document.getElementById('valoare-pret').onchange = function () {
     document.getElementById('inpPret').value = this.value
-    console.log('da')
   }
 
   function resetErrors() {
@@ -36,11 +35,11 @@ window.onload = function () {
     let inpCheie = document.getElementById('inpCheie').value
     inpCheie = inpCheie ? inpCheie.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : ''
 
-    if (inpNume.search(/,|;|\.|\||!|@|'|`|:|[0-9]/gim) != -1) {
+    if (inpNume.search(/,|;|\.|\||!|@|'|`|:/gim) != -1) {
       document.getElementById('inpNume').classList.add('is-invalid')
       return
     }
-    if (inpCheie.search(/,|;|\.|\||!|@|'|`|:|[0-9]/gim) != -1) {
+    if (inpCheie.search(/,|;|\.|\||!|@|'|`|:/gim) != -1) {
       document.getElementById('inpCheie').classList.add('is-invalid')
       return
     }
