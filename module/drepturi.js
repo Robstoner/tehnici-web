@@ -11,6 +11,9 @@
  
  @property {Symbol} trimitereCerereContact Dreptul de a trimite cererea de contact
 
+ @property {Symbol} adaugareProduse Dreptul de a adauga produse
+ @property {Symbol} stergereProduse Dreptul de a sterge produse
+
  */
 
 /**
@@ -25,6 +28,8 @@ const Drepturi = {
   vizualizareGalerie: Symbol('vizualizareGalerie'),
   vizualizareFacturi: Symbol('vizualizareFacturi'),
   trimitereCerereContact: Symbol('trimiteCerere'),
+  adaugareProduse: Symbol('adaugareProduse'),
+  stergereProduse: Symbol('stergereProduse'),
 }
 
 module.exports = Drepturi

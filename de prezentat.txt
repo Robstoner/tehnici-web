@@ -41,7 +41,7 @@ clase
 
 carusel fixed - first-page.js
 cookie ultimul produs accesat - produse.js : 93
+bonus: conditie and si or la select udpate delete
 
 input nume merge
 pagina produs cu poza si data 
-

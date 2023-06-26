@@ -6,6 +6,7 @@ const sharp = require('sharp')
 const { randomInt } = require('crypto')
 const { Client } = require('pg')
 
+const AccesBD = require('./module/accesbd.js')
 var client = new Client({
   host: 'localhost',
   port: 5432,
@@ -14,6 +15,8 @@ var client = new Client({
   password: '1234',
 })
 client.connect()
+
+let BD = AccesBD.getInstanta()
 
 obGlobal = {
   obErori: null,
@@ -102,7 +105,12 @@ app.get('/produse', async (req, res) => {
 
   if (req.query.categ) {
     let categ = req.query.categ
-    rez = await client.query('select * from produse where categorie = $1', [categ])
+    // rez = await client.query('select * from produse where categorie = $1', [categ])
+    rez = await BD.selectAsync({
+      tabel: 'produse',
+      campuri: ['*'],
+      conditii: [[`categorie='${categ}'`], [`subcategorie='sub2'`]],
+    })
     produse = rez.rows
   } else {
     rez = await client.query('select * from produse')

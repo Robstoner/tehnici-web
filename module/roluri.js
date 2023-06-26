@@ -31,6 +31,18 @@ class RolAdmin extends Rol {
   }
 }
 
+class RolAdministratorProduse extends Rol {
+  static get tip() {
+    return 'administratorProduse'
+  }
+  static get drepturi() {
+    return [Drepturi.adaugareProduse, Drepturi.stergereProduse]
+  }
+  constructor() {
+    super()
+  }
+}
+
 class RolModerator extends Rol {
   static get tip() {
     return 'moderator'
@@ -66,15 +78,19 @@ class RolFactory {
     switch (tip) {
       case RolAdmin.tip:
         return new RolAdmin()
+      case RolAdministratorProduse.tip:
+        return new RolAdministratorProduse()
       case RolModerator.tip:
         return new RolModerator()
       case RolClient.tip:
         return new RolClient()
+      default:
+        throw new Error('Rolul nu exista')
     }
   }
 }
 
 module.exports = {
   RolFactory: RolFactory,
-  RolAdmin: RolAdmin,
+  // RolAdmin: RolAdmin,
 }
